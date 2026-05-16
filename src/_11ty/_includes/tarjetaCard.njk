@@ -7,12 +7,22 @@
     </a>
   </figure>
 
+{# To find the URL of the resulting file for a paginated item in Eleventy, 
+it will be found in page.url and in the for loop below it will be in 
+item.page.url. So Monday will go to the URL /Monday/ Thursday to /Thursday/ etc.  
+Ed H 5/16/2026 my Mom would have been 93 today #}
+
   <div class="p-3">
     {% set comma = joiner() %}
     {% for tag in item.data.tags %}
-      {{ comma() }} <a href="/tags/{{ tag }}" class="is-uppercase is-size-7 has-text-grey-dark">{{ tag }}</a>
+    {% set tagURL = tag %}
+      {% if "Ames" in tag %} {% set tagURL = "AmesIowaAl-AnonMeetingsList" %}{% endif %}
+      {% if tag == "Beginner"%} {% set tagURL = "Monday" %}{% endif %}
+      {{ comma() }} <a href="/{{ tagURL }}/" class="is-uppercase is-size-7 has-text-grey-dark">{{ tag }}</a>
     {% endfor %}
     <h3 class="mycardclasstarjeta-title mt-0 mb-4 is-size-4 has-text-weight-bold has-text-grey-dark"><a href="{{ item.url }}" class="has-text-dark">{{ item.data.title }}</a></h3>
-    <p class="has-text-grey-dark">{{ item.data.description | descriptionLength }}</p>
+    <p class="has-text-grey-dark">
+      <a href="{{ item.page.url }}">{{ item.data.description | descriptionLength }}</a>
+    </p>
   </div>
 </div>

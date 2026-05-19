@@ -15,4 +15,4 @@ details: |
 
 - Every Saturday 10 AM
 
-### An Al-Anon meeting in Ames Iowa
+### An Al-Anon meeting in Ames Iowa every Saturday morning

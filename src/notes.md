@@ -34,6 +34,7 @@ into the main "." part of the repository and then commit to achieve 1) above.
 
  This is how I did this:
 
+
  1) Installed gh-pages: this is a package that will create a branch on github named gh-pages if one is
  not already created. The gh-pages npm package is a Node.js utility that automates the process of publishing static files to a 
  gh-pages branch on GitHub, which is then served by GitHub Pages.  It creates a temporary clone of the repository, copies 
@@ -58,14 +59,17 @@ only do 1) 2) and 3) above one time then do the following every time you want to
 
 6) git status <-- to see what files are staged to be committed
 
-6) commit -m "note for this commit maybe say upload source files changed" <-- because you want to add and commit the source code
+7) commit -m "note for this commit maybe say upload source files changed" <-- because you want to add and commit the source code
 
-7) Deploy to github
+8) git push origin main
 
-  > npm run deploy.                   <-- this git command pushes the contents of build folder into the gh-pages branch
+9) Deploy to github
+
+  > npm run deploy
+                     <-- this git command pushes the contents of build folder into the gh-pages branch
                                         it only publishes build folder and build files not the source files.
 
-6) Configure GitHub Pages:          <-- only do this once
+10) Configure GitHub Pages:          <-- only do this once
 
         In your repository's Settings > Pages
         set the source to the gh-pages branch and the folder to /(root).  <-- Ed H did this on 5/12/2026

@@ -29,10 +29,15 @@ featuredImage: /_images/default.jpg
 
           <div class="tags is-justify-content-left">
 
-            {# Ed H. 5/7/2026 display tags horizontally #}
+            {# Ed H. 5/7/2026 display tags horizontally on the meeting page near the bottom of the page. #}
             <div class="tags is-flex is-flex-direction-column">
               {% for tag in tags %}
-                <span class="tag">{{ tag }}</span>
+                  {% set tagURL = tag %} {# Ed H. added 5/16/2026 I want a link on each tag to the right meeting. 5/16 would have ben my Mother's 93rd birthday #}
+                  {% if "Ames" in tag %} {% set tagURL = "AmesIowaAl-AnonMeetingsList" %}{% endif %}
+                  {% if tag == "Beginner"%} {% set tagURL = "Monday" %}{% endif %}
+                <span class="tag">
+                  <a href="/{{ tagURL }}/" class="has-text-dark">{{ tag }}</a>
+                </span>
               {% endfor %}
             </div>
 

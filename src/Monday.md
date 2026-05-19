@@ -19,6 +19,6 @@ details: |
 - Families, friends, and observers welcome
 - Lots of free parking
 
-### A great meeting to attend if you are new to Al-Anon in or near Ames Iowa.
+### A good meeting to attend if you are new to Al-Anon in or near Ames Iowa.
 
 ### [How can Al-Anon Help Me?](https://al-anon.org/newcomers/)

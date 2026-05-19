@@ -1,7 +1,7 @@
 ---
 layout: meeting.njk
 title: Ames Iowa Al-Anon Meetings
-tags: ['Monday', 'Beginner', 'Tuesday', 'Wednesday', 'Thursday', 'Adult-Child', 'Saturday', 'Ames Iowa']
+mytags: ['Monday', 'Beginner', 'Tuesday', 'Wednesday', 'Thursday', 'Adult-Child', 'Saturday', 'Ames Iowa']
 featuredImage: /_images/AmesIowaAl-AnonMeetings-textIntoImages-com.png
 order: 80
 date: Last Modified  # page.date resolves to last modified date, otherwise to created date if date: left out

@@ -1,7 +1,7 @@
 ---
 layout: meeting.njk
 title: Thursday Adult Child Al-Anon Ames IA 7PM
-tags: ['Thursday-Adult-Child', 'Ames Iowa']
+mytags: ['Thursday-Adult-Child', 'Ames Iowa']
 featuredImage: /_images/thursday-adult.png
 featuredImage2: ""
 

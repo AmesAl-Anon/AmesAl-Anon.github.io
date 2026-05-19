@@ -1,7 +1,7 @@
 ---
 layout: meeting.njk
 title: Monday Beginner Al-Anon Ames IA 7:10PM
-tags: ['Beginner', 'Monday', 'Ames Iowa']
+mytags: ['Beginner', 'Monday', 'Ames Iowa']
 featuredImage: /_images/monday-textintoimages-com.png
 order: 20
 date: Last Modified  # page.date resolves to last modified date, otherwise to created date if date: left out

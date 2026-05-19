@@ -1,7 +1,7 @@
 ---
 layout: meeting.njk
 title: Thursday Al-Anon Ames IA 5:45PM
-tags: ['Thursday', 'Ames Iowa']
+mytags: ['Thursday', 'Ames Iowa']
 featuredImage: /_images/thursday.png
 date: Last Modified  # page.date resolves to last modified date, otherwise to created date if date: left out
 description: '1201 McCormick AVE, Ames Iowa 50010. Thursday 5:45PM Ames Iowa "Daily Hope & Courage" Al-Anon AFG Meeting'

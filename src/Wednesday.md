@@ -1,7 +1,7 @@
 ---
 layout: meeting.njk
 title: Wednesday Al-Anon Ames IA 7PM
-tags: ['Wednesday', 'Ames Iowa']
+mytags: ['Wednesday', 'Ames Iowa']
 featuredImage: /_images/wednesday.png
 featuredImage2: /_images/progressNotPerfectionGeneratedFromPerchancOrg.jpeg
 order: 40

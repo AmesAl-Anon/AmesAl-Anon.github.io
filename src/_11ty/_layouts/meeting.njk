@@ -1,9 +1,9 @@
 ---
 title: Ames Iowa Al-Anon Meetings AFG
+title2: Click to go to Al-Anon.org
 featuredImage: /_images/default.jpg
 ---
   {% include "head.njk" %}
-
   <body class="is-flex is-flex-direction-column">
 
     {% include "nav.njk" %}
@@ -21,7 +21,7 @@ featuredImage: /_images/default.jpg
               {{ description }}
             </h2>
 
-            {% if details %} {# Check if details exist before rendering #}
+            {% if details %} {# Check if details exist before rendering the details which are in markdown and need to be processed thru markdownify filter #}
               {{ details | markdownify | safe }}
             {% endif %}
 
@@ -29,14 +29,14 @@ featuredImage: /_images/default.jpg
 
           <div class="tags is-justify-content-left">
 
-            {# Ed H. 5/7/2026 display tags horizontally on the meeting page near the bottom of the page. #}
+            {# Ed H. 5/7/2026 display mytags vertically on the meeting page near the bottom of the page. #}
             <div class="tags is-flex is-flex-direction-column">
-              {% for tag in tags %}
-                  {% set tagURL = tag %} {# Ed H. added 5/16/2026 I want a link on each tag to the right meeting. 5/16 would have ben my Mother's 93rd birthday #}
-                  {% if "Ames" in tag %} {% set tagURL = "AmesIowaAl-AnonMeetingsList" %}{% endif %}
-                  {% if tag == "Beginner"%} {% set tagURL = "Monday" %}{% endif %}
+              {% for 1tag in mytags %}
+                  {% set tagURL = 1tag %} {# Ed H. added 5/16/2026 I want a link on each tag to the right meeting. 5/16 would have ben my Mother's 93rd birthday #}
+                  {% if "Ames" in 1tag %} {% set tagURL = "AmesIowaAl-AnonMeetingsList" %}{% endif %}
+                  {% if 1tag == "Beginner"%} {% set tagURL = "Monday" %}{% endif %}
                 <span class="tag">
-                  <a href="/{{ tagURL }}/" class="has-text-dark">{{ tag }}</a>
+                  <a href="/{{ tagURL }}/" class="has-text-dark">{{ 1tag }}</a>
                 </span>
               {% endfor %}
             </div>
@@ -54,7 +54,9 @@ featuredImage: /_images/default.jpg
           {% endif %}
           
             <figure class="image mb-4 is-128x128">
-              <img src="/_images/favicon.png" alt="{{title}}" title="{{title}}" width="20" height="20%">
+              <a href="https://www.al-anon.org" target="_blank">
+                <img src="/_images/favicon.png" alt="{{title2}}" title="{{title2}}" width="20" height="20%">
+              </a>
             </figure>
         </div>
 

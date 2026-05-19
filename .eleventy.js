@@ -75,7 +75,7 @@ module.exports = function (eleventyConfig) {
 
     //Order Post by Date orderByDate, or by Title orderByTitle or by Order etc. added by Ed H. 3/22/2026
     // if you don't want the .md file to included in the collection, then add a front matter 
-    // variable like "excludeFromCollection: true" and then filter it out in the collection 
+    // variable "excludeFromCollection: true" and then filter it out in the collection 
     // definition which I did for about.md because I don't want it to be included in the sortedPosts collection
     eleventyConfig.addCollection("sortedPosts", function (collection) {
         // Get all posts and sort by the 'order' front matter value
@@ -95,8 +95,8 @@ module.exports = function (eleventyConfig) {
 
         collection.map(item => {
             for (labeletiqueta of labelsetiquetas) {
-                // console.log(item.data.tags.length)
-                if (item.data.tags && item.data.tags.includes(labeletiqueta)) {
+                // console.log(item.data.mytags.length)
+                if (item.data.mytags && item.data.mytags.includes(labeletiqueta)) {
                     myfilterMyfiltrados.add(item)
                 }
             }

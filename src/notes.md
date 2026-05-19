@@ -1,7 +1,7 @@
 ---
 layout: meeting.njk
 title: Noes on how to build Ames Iowa Al-Anon Meetings site
-tags: ['notes', 'Ames Iowa']
+mytags: ['notes', 'Ames Iowa']
 featuredImage: /_images/AmesIowaAl-AnonMeetings-textIntoImages-com.png
 order: 90
 date: Last Modified  # page.date resolves to last modified date, otherwise to created date if date: left out

@@ -15,9 +15,9 @@ date: Last Modified  # page.date resolves to last modified date, otherwise to cr
 description: '217 6th St, Ames Iowa Al-Anon AFG "How It Works" Meeting at United Church of Christ, (meet in Parlor) 7PM'
 
 details: |
-    | Time.  | Day | Address           | Room      | City       | Name |
-    |--------|-----|------------------|-----------|------------|--------------|
-    | 7PM | Tue | United Church of Christ, 217 6th ST | Parlor (East door off the parking lot) | Ames, Iowa 50010 | How it Works |
+    | Time.  | Day | Address           | Room      | Name |
+    |--------|-----|------------------|-----------|--------------|
+    | 7PM | Tue | United Church of Christ, 217 6th ST, Ames, Iowa 50010 | Parlor (East door off parking lot) | How it Works |
 ---
 
 - Every Tuesday 7 PM to 8 PM

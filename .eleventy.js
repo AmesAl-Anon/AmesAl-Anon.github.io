@@ -66,10 +66,10 @@ module.exports = function (eleventyConfig) {
         .toLocaleString(DateTime.DATETIME_SHORT);
     });
 
-    // Number of characters for each Card
+    // Number of characters for each Card you can change it below. Set to 150 5/29/2026
     eleventyConfig.addFilter('descriptionLength', function(text) {
         let resultado
-        text === undefined ? resultado = '' : resultado = String(text).slice(0, 130) + '...';
+        text === undefined ? resultado = '' : resultado = String(text).slice(0, 150) + '...';
         return resultado
     });
 

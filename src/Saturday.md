@@ -14,11 +14,9 @@ date: Last Modified  # page.date resolves to last modified date, otherwise to cr
 featuredImage: /_images/saturday.png
 
 details: |
-    | Time | Day |Address           | Room      | City       | Name |
-    |------|-----|------------------|-----------|------------|--------------|
-    | 10AM | Sat | Collegiate United Methodist Church, 2622 Lincoln Way | Pine Room - (Use West door, located in basement) | Ames, Iowa 50014 | New Hope |
+    | Time | Day |Address           | Room      | Name |
+    |------|-----|------------------|-----------|--------------|
+    | 10AM | Sat | Collegiate United Methodist Church, 2622 Lincoln Way, Ames, Iowa 50014 | Pine Room (Use West door then downstairs) | New Hope |
 ---
 
-- Every Saturday 10 AM
-
-### An Al-Anon meeting in Ames Iowa every Saturday morning
+### Al-Anon meeting in Ames Iowa every Saturday morning 10 AM

@@ -14,10 +14,12 @@ date: Last Modified  # page.date resolves to last modified date, otherwise to cr
 description: '1201 McCormick AVE, Ames Iowa 50010. Thursday 5:45PM Ames Iowa "Daily Hope & Courage" Al-Anon AFG Meeting'
 permalink: /Thursday/
 details: |
-    | Time.  | Day | Address           | Room      | City       | Name |
-    |--------|-----|------------------|-----------|------------|--------------|
-    | 5:45PM | Thu | 1201 McCormick Ave | Al-Anon room (look for Al-Anon sign) | Ames, Iowa 50010 | Daily Hope & Courage |
+    | Time.  | Day | Address       | Room  |  Name |
+    |--------|-----|------------|-----------|----------|
+    | 5:45PM | Thu | 1201 McCormick Ave, Ames, Iowa 50010 | Al-Anon room (look for Al-Anon sign) | Daily Hope & Courage |
 ---
 
-- Every Thursday 5:45 PM to 6:45 PM
+- Every Thursday 
 - Families, friends of Alcoholics
+
+### Al-Anon meeting in Ames Iowa every Thursday 5:45 PM - 6:45 PM

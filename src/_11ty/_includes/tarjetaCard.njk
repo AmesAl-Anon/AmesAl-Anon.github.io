@@ -1,7 +1,7 @@
 
 <div class="mycardclass-tarjeta"> {# Tarjeta = card in Spanish #}
 
-  <figure class="image is-128x128zxcvb             ">
+  <figure class="image  ml-3 is-128x128             ">
     <a href="{{ item.url }}">
       <img src="{{item.data.featuredImage}}" alt="{{item.data.title}}" loading="lazy">
     </a>
@@ -12,14 +12,18 @@ it will be found in page.url and in the for loop below it will be in
 item.page.url. So Monday will go to the URL /Monday/ Thursday to /Thursday/ etc.  
 Ed H 5/16/2026 my Mom would have been 93 today #}
 
+{# Ed H. 5/26/2026 got rid of tags to simplify the site. Just put the Nav at the bottom of the page instead. You can bring them back if yuo want, the code is all still there as of 5/29/2026 #}
+
   <div class="p-3">
     {% set comma = joiner() %}
+    {# 
     {% for 1tag in item.data.mytags %}
-    {% set tagURL = 1tag %}  {# Ed H. added 5/16/2026 I want a link on each tag to the right meeting. 5/16 would have ben my Mother's 93rd birthday #}
+    {% set tagURL = 1tag %}  # Ed H. added 5/16/2026 I want a link on each tag to the right meeting. 5/16 would have ben my Mother's 93rd birthday #
       {% if "Ames" in 1tag %} {% set tagURL = "AmesIowaAl-AnonMeetingsList" %}{% endif %}
       {% if 1tag == "Beginner"%} {% set tagURL = "Monday" %}{% endif %}
       {{ comma() }} <a href="/{{ tagURL }}/" class="is-uppercase is-size-7 has-text-grey-dark">{{ 1tag }}</a>
     {% endfor %}
+    #}
     <h3 class="mycardclasstarjeta-title mt-0 mb-4 is-size-4 has-text-weight-bold has-text-grey-dark"><a href="{{ item.url }}" class="has-text-dark">{{ item.data.title }}</a></h3>
     <p class="has-text-grey-dark">
       <a href="{{ item.page.url }}">{{ item.data.description | descriptionLength }}</a>

@@ -1,10 +1,29 @@
 ---
 layout: meeting.njk
 title: Ames Iowa Al-Anon Meetings
-mytags: ['Monday', 'Beginner', 'Tuesday', 'Wednesday', 'Thursday', 'Adult-Child', 'Saturday', 'Ames Iowa']
+
+mytags: 
+    -   name: Monday
+        order: 1
+    -   name: Beginner
+        order: 2
+    -   name: Tuesday
+        order: 3
+    -   name: Wednesday
+        order: 4
+    -   name: Thursday
+        order: 5
+    -   name: Adult-Child
+        order: 6
+    -   name: Saturday
+        order: 7
+    -   name: 'Ames Iowa'
+        order: 20
+
 featuredImage: /_images/AmesIowaAl-AnonMeetings-textIntoImages-com.png
-order: 80
+
 date: Last Modified  # page.date resolves to last modified date, otherwise to created date if date: left out
+
 description: 'Ames Iowa Al-Anon meetings in one list'
 details: ""
 
@@ -15,7 +34,7 @@ pagination:
   addAllPagesToCollections: true
 ---
 
-{# Ed H. added this code 5/8/2026 to create the All Ames Al-Anon meetings page on the fly
+{# Ed H. added this code 5/8/2026 to create and All Ames Al-Anon meetings page on the fly
 using the details frontmatter variable from each file. The details are written in markdown so there
 is a filter in eleventy.js file called markdownify that renders the details first!!
 
@@ -35,6 +54,4 @@ npm run quiet    Ed H 5/12/2026 #}
 {% endfor %}
 
 ### [How can Al-Anon Help Me?](https://al-anon.org/newcomers/)
-
-<br>
 

@@ -1,16 +1,23 @@
 ---
 layout: meeting.njk
 title: Noes on how to build Ames Iowa Al-Anon Meetings site
-mytags: ['notes', 'Ames Iowa']
+mytags:
+    -   name: notes
+        order: 21
+    -   name: 'Ames Iowa'
+        order: 20
+
 featuredImage: /_images/AmesIowaAl-AnonMeetings-textIntoImages-com.png
-order: 90
+
 date: Last Modified  # page.date resolves to last modified date, otherwise to created date if date: left out
+
 description: 'NOTES about building the site: Ames Iowa Al-Anon meetings'
 eleventyExcludeFromCollections: true
 ---
 
 Ed H created this project March 2026 
 and pretty much finished 5/9/2026
+Then simplified and removed Tags 5/26/2026. Need to keep it simple.
 for Ames Al-Anon
 on github.io
 

@@ -9,7 +9,8 @@
       <p>
       <time class="has-text-grey-dark is-size-7">
       {# see eleventy.js for LUXON package to handle date formatting. postDate is a filter created in eleventy.js #}
-      This page last updated/published: {{ page.date | postDate }}
+      {# page.date resolves to last modified date, otherwise to created date if date: left out and I'm not sure exacty what files it is getting the dates from it always seems to be a few days old #}
+      This page last updated {{ page.date | postDate }}
       </time>
       </p>
       </p

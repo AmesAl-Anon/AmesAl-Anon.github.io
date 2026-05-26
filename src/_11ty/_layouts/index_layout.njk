@@ -1,11 +1,12 @@
 ---
 title: Al-Anon meetings in Ames Iowa USA
+date: Last Modified  # page.date resolves to last modified date, otherwise to created date if date: left out
 ---
 {% include "head.njk" %}
 <body class="is-flex is-flex-direction-column">
   {% include "nav.njk" %}
   {{ content | safe }}
-  {% renderFile "./src/_11ty/_includes/footer.md" %} {# render footer.md first then add it to the stream because footer is markdown and must be rendered first #}
+  {% renderFile "./src/_11ty/_includes/footer.md" %} {# render footer.md first then add it to the eleventy stream because footer is markdown and must be rendered first #}
   {% include "footer.njk" %}
 </body>
 </html>

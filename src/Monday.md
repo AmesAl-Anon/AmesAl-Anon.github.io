@@ -1,9 +1,17 @@
 ---
 layout: meeting.njk
 title: Monday Beginner Al-Anon Ames IA 7:10PM
-mytags: ['Beginner', 'Monday', 'Ames Iowa']
+meetingOrder: 1
+ 
+mytags: 
+    -   name: Beginner
+        order: 2
+    -   name: Monday
+        order: 1
+    -   name: 'Ames Iowa'
+        order: 20
+
 featuredImage: /_images/monday-textintoimages-com.png
-order: 20
 date: Last Modified  # page.date resolves to last modified date, otherwise to created date if date: left out
 
 description: '1201 McCormick AVE, Ames Iowa 50010. The Ames Iowa Beginners Al-Anon meeting is a good way to learn about the benefits of Al-Anon. If you have never experienced Al-Anon or just want a Monday Meeting please join us'

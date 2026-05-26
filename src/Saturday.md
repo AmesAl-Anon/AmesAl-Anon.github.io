@@ -1,11 +1,17 @@
 ---
 layout: meeting.njk
 title: Saturday Al-Anon Ames IA 10AM
-mytags: ['Saturday', 'Ames Iowa']
+meetingOrder: 6
+
+mytags: 
+    -   name: Saturday
+        order: 7
+    -   name: 'Ames Iowa'
+        order: 20
+
 description: 'Saturday 10 AM Ames Iowa Al-Anon AFG Meeting. Collegiate United Methodist Church, 2622 Lincoln Way, Ames IA (Pine room in basement, use West door)'
 date: Last Modified  # page.date resolves to last modified date, otherwise to created date if date: left out
 featuredImage: /_images/saturday.png
-order: 70
 
 details: |
     | Time | Day |Address           | Room      | City       | Name |

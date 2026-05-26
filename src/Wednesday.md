@@ -1,10 +1,16 @@
 ---
 layout: meeting.njk
 title: Wednesday Al-Anon Ames IA 7PM
-mytags: ['Wednesday', 'Ames Iowa']
+meetingOrder: 3
+
+mytags:
+    -   name: Wednesday
+        order: 4
+    -   name: 'Ames Iowa'
+        order: 20
+
 featuredImage: /_images/wednesday.png
 featuredImage2: /_images/progressNotPerfectionGeneratedFromPerchancOrg.jpeg
-order: 40
 description: '1201 McCormick AVE, Ames Iowa 50010. Ames Iowa Al-Anon AFG "Progress Not Perfection" Wednesday 7PM Meeting'
 details: |
     | Time.  | Day | Address           | Room      | City       | Name |
@@ -16,4 +22,4 @@ details: |
 - Families, friends, and observers welcome
 - Plenty of free parking
 
-## An Al-Anon meeting in Ames Iowa
+### An Al-Anon meeting in Ames Iowa every Wednesday

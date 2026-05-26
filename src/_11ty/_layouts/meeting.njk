@@ -27,41 +27,60 @@ featuredImage: /_images/default.jpg
 
             {{ content | safe }}
 
-          <div class="tags is-justify-content-left">
+            <div class="tags is-justify-content-left">
 
-            {# Ed H. 5/7/2026 display mytags vertically on the meeting page near the bottom of the page. #}
+      {# comment out the tags. Decided to simpify the site and not use them. Just put the Nav at the bottom of the page instead.  Ed H 5/26/2026 #}
+      {#
+
+            # Ed H. 5/7/2026 display mytags vertically on the meeting page near the bottom of the page. #
             <div class="tags is-flex is-flex-direction-column">
-              {% for 1tag in mytags %}
-                  {% set tagURL = 1tag %} {# Ed H. added 5/16/2026 I want a link on each tag to the right meeting. 5/16 would have ben my Mother's 93rd birthday #}
-                  {% if "Ames" in 1tag %} {% set tagURL = "AmesIowaAl-AnonMeetingsList" %}{% endif %}
-                  {% if 1tag == "Beginner"%} {% set tagURL = "Monday" %}{% endif %}
+              {% for onetag in mytags.name %}
+                  {% set tagURL = onetag %} # Ed H. added 5/16/2026 I want a link on each tag to the right meeting. 5/16 would have ben my Mother's 93rd birthday #
+                  {% if "Ames" in onetag %} {% set tagURL = "AmesIowaAl-AnonMeetingsList" %}{% endif %}
+                  {% if onetag == "Beginner"%} {% set tagURL = "Monday" %}{% endif %}
                 <span class="tag">
-                  <a href="/{{ tagURL }}/" class="has-text-dark">{{ 1tag }}</a>
+                  <a href="/{{ tagURL }}/" class="has-text-dark">{{ onetag }}</a>
                 </span>
               {% endfor %}
             </div>
+        #}
 
           {% if featuredImage %}
-            <figure class="image is-128x128">
+            <figure class="image mt-3  is-128x128">
               <img src="{{featuredImage}}" alt="{{title}}" title="{{title}}" width="20" height="20%">
             </figure>
           {% endif %}
-
-          {% if featuredImage2 %}
-            <figure class="image is-128x128">
-              <img src="{{featuredImage2}}" alt="{{title}}" title="{{title}}" width="20" height="20%">
-            </figure>
-          {% endif %}
           
-            <figure class="image mb-4 is-128x128">
+          {# display the Al-Anon logo and link to the Al-Anon website. Ed H. added 5/16/2026 #}
+            <figure class="image mb-6 is-128x128">
               <a href="https://www.al-anon.org" target="_blank">
                 <img src="/_images/favicon.png" alt="{{title2}}" title="{{title2}}" width="20" height="20%">
               </a>
             </figure>
+
+          {% if featuredImage2 %}
+            <figure class="image mb-6 mb-6 is-128x128">
+              <img src="{{featuredImage2}}" alt="{{title}}" title="{{title}}" width="20" height="20%">
+            </figure>
+          {% endif %}
+
         </div>
+
+      {# comment out the tags. Decided to simpify the site and not use them. Just put the Nav at the bottom of the page instead.  Ed H 5/26/2026
+
+        {% set sortedMyTags = collections.all | getSortedMyTagsdebug %}
+          <ul>
+            {% for tag in sortedMyTags %}
+              <li>{{ tag.name }} (Order: {{ tag.order }})</li>
+            {% endfor %}
+          </ul>
+        #}
 
       </article>
     </main>
+
+        {% include "nav.njk" %}
+
 
     {% if config.showRelatedMeetings %}
       {% include "related-meetings.njk" %}

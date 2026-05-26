@@ -82,11 +82,77 @@ module.exports = function (eleventyConfig) {
         return collection
         .getFilteredByGlob("./src/*.md")
         .sort((a, b) => {
-            const orderA = Number(a.data.order) || Infinity;
-            const orderB = Number(b.data.order) || Infinity;
+            const orderA = Number(a.data.meetingOrder) || Infinity;
+            const orderB = Number(b.data.meetingOrder) || Infinity;
             return orderA - orderB;
         });
     });
+
+    // Get all unique mytags from the collection and sort them by the 'order' key in the mytags objects. Ed H. 5/19/2026
+    //
+    // function(collection) defines a JavaScript function that takes one parameter named collection. 
+    // This parameter represents the entire Eleventy collection (e.g., all blog posts, pages, etc.) 
+    // that is passed to the filter when it's used in a template. The function then processes this collection—filtering, 
+    // mapping, or sorting its items—based on the defined logic, such as gathering and ordering tags by an order property. 
+    //
+    // eleventyConfig.addFilter("getSortedMyTags", function(collection) {
+    // // 1. Initialize an empty array to collect all 'mytags' objects from every item in the collection.
+    // const allMyTags = [];
+    //
+    // // 2. Loop through each item (e.g., a blog post) in the Eleventy collection.
+    // collection.forEach(item => {
+    //    // 3. Check if the current item has a 'mytags' property in its front matter data.
+    //    if (item.data.mytags) {
+    //    // 4. If 'mytags' exists, spread its contents (an array of objects) and add each object to 'allMyTags'.
+    //    //    This flattens the arrays from individual items into one large array.
+    //    allMyTags.push(...item.data.mytags);
+    //    }
+    // });
+    //
+    // // 5. Create an empty object to store unique tags, using the tag's 'name' as the key to prevent duplicates.
+    // const uniqueTags = {};
+    // allMyTags.forEach(tagObj => {
+    //    // 6. Only add the tag to 'uniqueTags' if it hasn't been added before (checks by 'name').
+    //    if (!uniqueTags[tagObj.name]) {
+    //    uniqueTags[tagObj.name] = tagObj;
+    //    }
+    // });
+    //
+    // 7. Convert the uniqueTags object back into an array of tag objects.
+    //    Sort this array by the 'order' property in ascending order.
+    //    If a tag lacks an 'order' property, it defaults to 0.
+    // return Object.values(uniqueTags).sort((a, b) => (a.order || 0) - (b.order || 0));
+    // });
+    //
+// ===
+// eleventyConfig.addFilter("getSortedMyTagsdebug", function(collection) {
+  // const allMyTags = [];
+  //
+  // collection.forEach(item => {
+  //  if (item.data.mytags) {
+  //    allMyTags.push(...item.data.mytags);
+  //  }
+  // });
+  //
+  // Debug: Log the combined array of all tags before deduplication
+  // console.log("Debug: All mytags collected:", allMyTags);
+  //
+  // const uniqueTags = {};
+  // allMyTags.forEach(tagObj => {
+  //   if (!uniqueTags[tagObj.name]) {
+  //    uniqueTags[tagObj.name] = tagObj;
+  //  }
+  // });
+  //
+  //const sortedTags = Object.values(uniqueTags).sort((a, b) => (a.order || 0) - (b.order || 0));
+  //
+  // Debug: Log the final, unique, and sorted list of tags
+  // console.log("Debug: Final sorted tags:", sortedTags);
+  //
+  //return sortedTags;
+  // });   
+  // ===
+
 
     // Related Items custom filter.
     eleventyConfig.addFilter('relatedRelacionados', function(collection, labelsetiquetas, path, limited) {

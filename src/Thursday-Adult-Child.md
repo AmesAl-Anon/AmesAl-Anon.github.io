@@ -1,13 +1,17 @@
 ---
 layout: meeting.njk
 title: Thursday Adult Child Al-Anon Ames IA 7PM
-mytags: ['Thursday-Adult-Child', 'Ames Iowa']
+meetingOrder: 5
+
+mytags: 
+    -   name: Thursday-Adult-Child
+        order: 6
+    -   name: 'Ames Iowa'
+        order: 20
+        
 featuredImage: /_images/thursday-adult.png
 featuredImage2: ""
-
-order: 60
 permalink: /Thursday-Adult-Child/
-
 description: '1517 Northwestern Ave, Ames Iowa Al-Anon AFG Meeting Bethesda Lutheran Church 7PM'
 
 details: |

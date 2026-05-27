@@ -6,6 +6,7 @@ date: Last Modified  # page.date resolves to last modified date, otherwise to cr
 <body class="is-flex is-flex-direction-column">
   {% include "nav.njk" %}
   {{ content | safe }}
+ {% include "nav.njk" %}
   {% renderFile "./src/_11ty/_includes/footer.md" %} {# render footer.md first then add it to the eleventy stream because footer is markdown and must be rendered first #}
   {% include "footer.njk" %}
 </body>

@@ -15,11 +15,24 @@ description: 'NOTES about building the site: Ames Iowa Al-Anon meetings'
 eleventyExcludeFromCollections: true
 ---
 
-Ed H created this project March 2026 
+_____
+
+### Terminal commands to update this site as of 5/27/2026 Ed H.
+
+#### npm run quiet
+#### git add . 
+#### git status
+#### commit -m "___________ note here"
+#### git push origin main
+#### npm run deploy
+#### [https://AmesAl-Anon.github.io](https://AmesAl-Anon.github.io)
+
+_____
+
+#### Ed H created this project March 2026 
 and pretty much finished 5/9/2026
-Then simplified and removed Tags 5/26/2026. Need to keep it simple.
-for Ames Al-Anon
-on github.io
+Then simplified and removed Tags 5/26/2026. Keeping it simple.
+For Ames Iowa Al-Anon on github.io
 
 1) The name of the top level folder AmesAl-Anon.github.io needs to match the name of the repository exactly
 even the case needs to match I think. If they match then github will use the index.html file from the main

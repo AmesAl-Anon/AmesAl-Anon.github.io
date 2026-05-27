@@ -22,8 +22,9 @@ _____
 #### npm run quiet
 #### git add . 
 #### git status
-#### commit -m "___________ note here"
+#### git commit -m "___________ note here"
 #### git push origin main
+#### git status
 #### npm run deploy
 #### [https://AmesAl-Anon.github.io](https://AmesAl-Anon.github.io)
 

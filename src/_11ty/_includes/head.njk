@@ -6,12 +6,13 @@
 
     <title>{{ title }}</title>
     <meta name="description" content="{{ description or site.description }}">
+    <meta name="keywords" content="{{ config.keywords }}">
 
     <link rel="stylesheet" href="{{ '/theme.css' | url }}">
     <link rel="icon" type="image/png" href="/_images/favicon.png" sizes="32x32">
 
     {% if page.url == "/" %}
-        <! Ed H added Google Search Console verification meta tag. only needs to be in the home page 5/15/2026 
+        <! Ed H added Google Search Console verification meta tag for Ames Iowa Al-Anon Meetings site. Only in the home page 5/15/2026 
         to enable Google Search Console for the site.>
         {# This meta tag needed to verify ownership of the site for Google Search Console, 
         which provides insights into how the site is performing in Google search results. #}

@@ -22,8 +22,6 @@ mytags:
 
 featuredImage: /_images/AmesIowaAl-AnonMeetings-textIntoImages-com.png
 
-date: Last Modified  # page.date resolves to last modified date, otherwise to created date if date: left out
-
 description: 'Ames Iowa Al-Anon weekly meeting schedule'
 details: ""
 

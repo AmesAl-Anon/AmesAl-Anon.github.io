@@ -1,22 +1,17 @@
-<footer class="section has-background-warning has-text-white">
+<footer class="section pt-0 mt-0 has-background-warning has-text-white">
   <div class="container">
     <div class="level">
       <div class="level-left">
         <div class="level-item">
-          <p class="has-text-centered-mobile">
      
-    {% if config.showDate %} {# see config.js for showDate setting. If true, it will show the last modified date of the page. #}  
-      <p>
+    {% if config.showDate %} {# see config.json for showDate setting. If true, it will show the last modified date of the page. #}  
       <time class="has-text-grey-dark is-size-7">
       {# see eleventy.js for LUXON package to handle date formatting. postDate is a filter created in eleventy.js #}
       {# page.date resolves to last modified date, otherwise to created date if date: left out and I'm not sure exacty what files it is getting the dates from it always seems to be a few days old #}
       This page last updated {{ page.date | postDate }}
       </time>
-      </p>
-      </p
     {% endif %}
-
-        </div>
+      </div>
       </div>
 
       <div class="level-right">

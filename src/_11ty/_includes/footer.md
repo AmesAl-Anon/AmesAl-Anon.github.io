@@ -5,7 +5,13 @@
 
   [Ames Iowa Al-Anon Home Page](/index.html)
 
+  <br>
+
   [How can Al-Anon Help Me?](https://al-anon.org/newcomers/)
+
+  [Al-Anon Changed My Life](https://al-anon.org/blog/al-anon-changed-my-life/)
+  
+  <br>
 
   [Frequently Asked Questions](https://al-anon.org/newcomers/faq/)
 

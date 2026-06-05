@@ -26,4 +26,4 @@ details: |
 - Plenty of free parking
 - Al-Anon meeting in Ames, Iowa every Monday evening
 
-### Click here to find out more about: [How can Al-Anon Help Me?](https://al-anon.org/newcomers/)
+### Click here to find out more about: [How can Al-Anon Help Me?](https://al-anon.org/newcomers/){target="_blank" rel="noopener"}

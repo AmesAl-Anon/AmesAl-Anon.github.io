@@ -1,6 +1,7 @@
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const { RenderPlugin } = require("@11ty/eleventy");
 const MarkdownIt = require('markdown-it');
+const markdownItAttrs = require('markdown-it-attrs');
 
 module.exports = function (eleventyConfig) {
     // Carpetas que añade directamente al directorio de salida
@@ -221,10 +222,6 @@ module.exports = function (eleventyConfig) {
 
      eleventyConfig.addPlugin(RenderPlugin);
   
-    // This plubin allows you to use the markdown filter in your nunjucks templates. Ed H. 5/7/2026
-    // I like using markdown for tables because it is easy to create them. 
-    const md = new MarkdownIt({ html: true });
-    eleventyConfig.addFilter('markdownify', (content) => md.render(content));
 
     // Inline JS
     const { minify } = require("terser");
@@ -259,6 +256,27 @@ module.exports = function (eleventyConfig) {
             return content;
         });
     }
+
+    // This plubin allows you to use the markdown filter in your nunjucks templates. Ed H. 5/7/2026
+    // I like using markdown for tables because it is easy to create them. 
+    const md = new MarkdownIt({ html: true });
+    eleventyConfig.addFilter('markdownify', (content) => md.render(content));
+
+    // Define markdown-it options Ed H 6/5/2026 to be able to use markdown-it-attrs plugin which allows you to add attributes to markdown elements. 
+    // For example, you can add a class to a heading like this: ## Heading { .my-class } and then in your CSS you can style that class. 
+    // This is really useful for styling specific elements in your markdown content without having to write custom HTML. Ed H 6/5/2026.
+    // mainly I want to use this plugin to open links in a new tab by adding target="_blank" to all links in the markdown content. Ed H 6/5/2026.
+    const markdownItOptions = {
+        html: true,
+        breaks: true,
+        linkify: true
+    };
+
+    // Create the markdown library instance with the plugin
+    const markdownLib = MarkdownIt(markdownItOptions).use(markdownItAttrs);
+
+    // Override the default markdown library
+    eleventyConfig.setLibrary('md', markdownLib);
 
     // directory structure
     return {

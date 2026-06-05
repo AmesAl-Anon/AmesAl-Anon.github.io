@@ -27,4 +27,4 @@ details: |
 
 >  Will benefit adult children of alchoholics or adult grandchildren of alcoholics and/or friends or family of alcoholics or anyone affected
 
-- Click to find out more about: [A Place for Adult Children of Alcoholics](https://al-anon.org/blog/place-adult-children-alcoholics/)
+- Click to find out more about: [A Place for Adult Children of Alcoholics](https://al-anon.org/blog/place-adult-children-alcoholics/){target="_blank" rel="noopener"}

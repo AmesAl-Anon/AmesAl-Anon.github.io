@@ -138,18 +138,18 @@
 </ul>
 <hr>
 <h4>Ed H created this project March 2026</h4>
-<p>and pretty much finished 5/9/2026
-Then simplified and removed Tags 5/26/2026. Keeping it simple.
-For Ames Iowa Al-Anon on github.io</p>
+<p>and pretty much finished 5/9/2026<br>
+Then simplified and removed Tags 5/26/2026. Keeping it simple.<br>
+For Ames Iowa Al-Anon on <a href="http://github.io">github.io</a></p>
 <ol>
 <li>
-<p>The name of the top level folder AmesAl-Anon.github.io needs to match the name of the repository exactly
-even the case needs to match I think. If they match then github will use the index.html file from the main
+<p>The name of the top level folder <a href="http://AmesAl-Anon.github.io">AmesAl-Anon.github.io</a> needs to match the name of the repository exactly<br>
+even the case needs to match I think. If they match then github will use the index.html file from the main<br>
 part of the git repository and you won't need a subdirectory. Much cleaner. Ed H 5/9/2026</p>
 </li>
 <li>
-<p>The build files are going into the build/ folder but you want the build files to be in the main part of the
-repository. Git makes an exact copy of your local folder on github so you need to move the build files
+<p>The build files are going into the build/ folder but you want the build files to be in the main part of the<br>
+repository. Git makes an exact copy of your local folder on github so you need to move the build files<br>
 into the main &quot;.&quot; part of the repository and then commit to achieve 1) above.</p>
 </li>
 </ol>
@@ -161,9 +161,9 @@ into the main &quot;.&quot; part of the repository and then commit to achieve 1)
 <p>deploy to github and keep them in a separate branch gh-pages</p>
 <p>This is how I did this:</p>
 <ol>
-<li>Installed gh-pages: this is a package that will create a branch on github named gh-pages if one is
-not already created. The gh-pages npm package is a Node.js utility that automates the process of publishing static files to a
-gh-pages branch on GitHub, which is then served by GitHub Pages.  It creates a temporary clone of the repository, copies
+<li>Installed gh-pages: this is a package that will create a branch on github named gh-pages if one is<br>
+not already created. The gh-pages npm package is a Node.js utility that automates the process of publishing static files to a<br>
+gh-pages branch on GitHub, which is then served by GitHub Pages.  It creates a temporary clone of the repository, copies<br>
 specified source files (such as a dist or build folder from eleventy app), commits them, and pushes them to the target branch.</li>
 </ol>
 <blockquote>
@@ -173,8 +173,8 @@ specified source files (such as a dist or build folder from eleventy app), commi
 <li>Added a Deploy Script to package.json:</li>
 </ol>
 <blockquote>
-<p>&quot;scripts&quot;: {                      &lt;--only do this once
-&quot;deploy&quot;: &quot;gh-pages -d build&quot;
+<p>&quot;scripts&quot;: {                      &lt;--only do this once<br>
+&quot;deploy&quot;: &quot;gh-pages -d build&quot;<br>
 }</p>
 </blockquote>
 <ol start="3">
@@ -202,14 +202,14 @@ specified source files (such as a dist or build folder from eleventy app), commi
 </li>
 </ol>
 <blockquote>
-<p>npm run deploy
-&lt;-- this git command pushes the contents of build folder into the gh-pages branch
+<p>npm run deploy<br>
+&lt;-- this git command pushes the contents of build folder into the gh-pages branch<br>
 it only publishes build folder and build files not the source files.</p>
 </blockquote>
 <ol start="10">
 <li>
 <p>Configure GitHub Pages:          &lt;-- only do this once</p>
-<p>In your repository's Settings &gt; Pages
+<p>In your repository's Settings &gt; Pages<br>
 set the source to the gh-pages branch and the folder to /(root).  &lt;-- Ed H did this on 5/12/2026</p>
 </li>
 </ol>
@@ -219,32 +219,32 @@ set the source to the gh-pages branch and the folder to /(root).  &lt;-- Ed H di
 <ol start="4">
 <li>from a terminal do the following</li>
 </ol>
-<p>git mv build/* .
-note: if you get an error that there are already files there and is a conflic with the same name do:
-git mv -f build/* .
-note: the -f forces the move which should be used sparingly
-note: do not need to move the images folder unless you have changed an image so do the following
-git rm -r Monday Tuesday Wednesday Thursday Saturday Thursday-Adult-Child index.html
-setopt extended_glob
-git mv -f build/^_images .
+<p>git mv build/* .<br>
+note: if you get an error that there are already files there and is a conflic with the same name do:<br>
+git mv -f build/* .<br>
+note: the -f forces the move which should be used sparingly<br>
+note: do not need to move the images folder unless you have changed an image so do the following<br>
+git rm -r Monday Tuesday Wednesday Thursday Saturday Thursday-Adult-Child index.html<br>
+setopt extended_glob<br>
+git mv -f build/^_images .<br>
 this will move everything except anything with _images in it</p>
 <p>If the build/AmesIowaAl-AnonMeetingsList directory exists but contains no files that are tracked by Git (e.g., only untracked files or subdirectories), Git sees it as &quot;empty&quot; and refuses to move it.<br>
-so add the build files
-git add -A build/* .
-git status
-git mv build/^_images .
-git mv -f build/^_images .
-then
-git add .
-or
-git add -A
-the -A will also delete any files that need deleting
-git commit -m &quot;Update Al-Anon site + move build files to root again&quot;
+so add the build files<br>
+git add -A build/* .<br>
+git status<br>
+git mv build/^_images .<br>
+git mv -f build/^_images .<br>
+then<br>
+git add .<br>
+or<br>
+git add -A<br>
+the -A will also delete any files that need deleting<br>
+git commit -m &quot;Update Al-Anon site + move build files to root again&quot;<br>
 git push origin main</p>
-<p>or you can do all of the above except the first command above git mv build/* .
+<p>or you can do all of the above except the first command above git mv build/* .<br>
 from the Visual Studio Code github publish extension too except can't do the build/ mv</p>
 <hr>
-<h2>Make AmesAl-Anon.github.io site google searcheable</h2>
+<h2>Make <a href="http://AmesAl-Anon.github.io">AmesAl-Anon.github.io</a> site google searcheable</h2>
 <ol>
 <li>
 <p>go to Google Search verification site</p>
@@ -259,7 +259,7 @@ from the Visual Studio Code github publish extension too except can't do the bui
 <p>Google will verity the site and say Done -- Ed H. done 5/15/2026</p>
 </li>
 <li>
-<p>In a day or so go to https://search.google.com/search-console?resource_id=https://amesal-anon.github.io/ and see if it is indexed</p>
+<p>In a day or so go to <a href="https://search.google.com/search-console?resource_id=https://amesal-anon.github.io/">https://search.google.com/search-console?resource_id=https://amesal-anon.github.io/</a> and see if it is indexed</p>
 </li>
 </ol>
 
@@ -364,14 +364,14 @@ from the Visual Studio Code github publish extension too except can't do the bui
 <p><a href="/AmesIowaAl-AnonMeetingsList/">Ames Iowa Al-Anon Weekly Meeting Schedule</a></p>
 <p><a href="/index.html">Ames Iowa Al-Anon Home Page</a></p>
   <br>
-<p><a href="https://al-anon.org/newcomers/">How can Al-Anon Help Me?</a></p>
-<p><a href="https://al-anon.org/blog/al-anon-changed-my-life/">Al-Anon Changed My Life</a></p>
+<p><a href="https://al-anon.org/newcomers/" target="_blank" rel="noopener">How can Al-Anon Help Me?</a></p>
+<p><a href="https://al-anon.org/blog/al-anon-changed-my-life/" target="_blank" rel="noopener">Al-Anon Changed My Life</a></p>
   <br>
-<p><a href="https://al-anon.org/newcomers/faq/">Frequently Asked Questions</a></p>
-<p><a href="https://al-anon.org/">Al-Anon Family Groups AFG (Al-Anon.org)</a></p>
-<p><a href="https://Iowa-al-anon.org/">Iowa Al-Anon Family Groups AFG (Iowa-Al-Anon.org)</a></p>
-<p><a href="https://al-anon.org/al-anon-meetings/find-an-al-anon-meeting/">Find Al-Anon Meetings worldwide (Al-Anon.org find a meeting)</a></p>
-<p><a href="https://AimForAmes.org/">Aim for Ames</a></p>
+<p><a href="https://al-anon.org/newcomers/faq/" target="_blank" rel="noopener">Frequently Asked Questions</a></p>
+<p><a href="https://al-anon.org/" target="_blank" rel="noopener">Al-Anon Family Groups AFG (Al-Anon.org)</a></p>
+<p><a href="https://Iowa-al-anon.org/" target="_blank" rel="noopener">Iowa Al-Anon Family Groups AFG (Iowa-Al-Anon.org)</a></p>
+<p><a href="https://al-anon.org/al-anon-meetings/find-an-al-anon-meeting/" target="_blank" rel="noopener">Find Al-Anon Meetings worldwide (Al-Anon.org find a meeting)</a></p>
+<p><a href="https://AimForAmes.org/" target="_blank" rel="noopener">Aim for Ames</a></p>
   </div>
 </footer> 
     <footer class="section pt-0 mt-0 has-background-warning has-text-white">

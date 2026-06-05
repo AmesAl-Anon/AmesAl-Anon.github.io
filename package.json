@@ -12,6 +12,7 @@
     "@11ty/eleventy-navigation": "^1.0.5",
     "clean-css": "^5.3.3",
     "eleventy-plugin-purgecss": "^0.6.0",
+    "markdown-it-attrs": "^5.0.0",
     "markdown-it-eleventy-img": "^0.10.2",
     "npm": "^11.16.0"
   },

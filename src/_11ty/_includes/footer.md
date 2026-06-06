@@ -10,6 +10,8 @@
   [How can Al-Anon Help Me?](https://al-anon.org/newcomers/){target="_blank" rel="noopener"}
 
   [Al-Anon Changed My Life](https://al-anon.org/blog/al-anon-changed-my-life/){target="_blank" rel="noopener"}
+
+  [Al-Anon Magazines: The Forum & AFA Al-Anon Faces Alcoholism](https://al-anon.org/for-members/members-resources/literature/magazines/){target="_blank" rel="noopener"}
   
   <br>
 

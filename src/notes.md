@@ -30,9 +30,9 @@ _____
 
 _____
 
-#### Streamlined the site a bit more on Friday June 5 2026 incorporating a lot of Miriam's suggestions.
+#### Streamlined the Ames Al-Anon web site a bit more on Friday June 5 2026 incorporating a lot of Miriam's suggestions.
 
-### Ed searched the net June 5 2026 for Ames Iowa Al-Anon meetings and this search is not much much better and these are the results:
+### Ed searched the net June 5 2026 for Ames Iowa Al-Anon meetings and this search is now much much better and these are the results which now finds all the meetings except for Tuesday Al-Anon and only the Tuesday Alateen is not listed in the AI for some reason.
 
 #### Al-Anon meetings in Ames, IA, primarily hosted at 1201 McCormick Ave (Ames Alano/McCormick Clubhouse), offer regular weekly sessions for family members and friends of alcoholics.  Key local groups include the Beginner’s Al-anon Family Group on Mondays at 7:00 PM, Progress Not Perfection on Wednesdays at 7:00 PM, and Daily Hope and Courage on Thursdays at 5:45 PM. 
 
@@ -44,6 +44,7 @@ _____
 - Thursday Night: Daily Hope and Courage AFG at 1201 McCormick Ave (5:45 PM) and Adult Children AFG at 1517 Northwestern Ave (7:00 PM), both closed and wheelchair-accessible. 
 - Saturday Morning: New Hope Group AFG at 2622 Lincoln Way (10:00 AM), a closed, wheelchair-accessible meeting. 
 
+#### Also added the markdown-it-attrs using npm and put this into the eleventy.js file today to enable links to open in a new tab.
 ___
 
 #### Ed H created this project March 2026 

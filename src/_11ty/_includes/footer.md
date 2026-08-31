@@ -7,6 +7,14 @@
 
   <br>
 
+<strong>Ames Al-Anon Help Line:</strong>
+
+  Ames Iowa Al-Anon phone: 515-257-6317
+  
+  Ames Iowa Al-Anon email: AmesAlAnon@gmail.com
+
+  <br>
+
   [How can Al-Anon Help Me?](https://al-anon.org/newcomers/){target="_blank" rel="noopener"}
 
   [Al-Anon Changed My Life](https://al-anon.org/blog/al-anon-changed-my-life/){target="_blank" rel="noopener"}

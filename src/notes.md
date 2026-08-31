@@ -17,9 +17,11 @@ eleventyExcludeFromCollections: true
 
 _____
 
-### Terminal commands to update this site as of 5/27/2026 Ed H.
+### Terminal commands to update Al-anon site as of 5/27/2026 and again 8/31/2026 Ed H.
 
-#### npm run quiet
+#### cd to the root of the project folder above build and src
+#### npm run quiet 
+#### quit out of the build and stay in the root folder
 #### git add . 
 #### git status
 #### git commit -m "___________ note here"
@@ -88,10 +90,12 @@ into the main "." part of the repository and then commit to achieve 1) above.
 
 3) Set the output dir to build/ in eleventy.js    <-- just do this one time
 
-only do 1) 2) and 3) above one time then do the following every time you want to change the website
+## Only do 1) 2) and 3) above one time then do the following every time you want to change the website. 
+
+### Note: Want both src files & build files added to github because github is the webhost and you need the build files (which is the website itself) + want to preserve the src files. So cd into the project root which will be the folder above build and src then do the following commands from Terminal:
 
 
-4) npm run quiet                    <-- build the project to the build folder
+4) npm run quiet  <-- build the project to the build folder the quit out of this
 
 5) git add . <-- because want to add source code files >
 
@@ -112,11 +116,11 @@ only do 1) 2) and 3) above one time then do the following every time you want to
         In your repository's Settings > Pages
         set the source to the gh-pages branch and the folder to /(root).  <-- Ed H did this on 5/12/2026
 
-This is now working the way I want it. Yahoo !!
+## Now working the way I want it. Yahoo !!
 
  ***
 
- Ignore the following. This was my first attempt at having my build cake and eating it too.
+ # Ignore the following: Was Ed's first attempt at having my build cake and eating it too.
 
 4) from a terminal do the following
 

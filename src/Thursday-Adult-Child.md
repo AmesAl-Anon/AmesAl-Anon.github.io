@@ -25,6 +25,6 @@ details: |
 - Al-Anon meeting in Ames, Iowa every Thursday evening
 
 
->  Will benefit adult children of alchoholics or adult grandchildren of alcoholics and/or friends or family of alcoholics or anyone affected
+>  Will benefit anyone affected, including adult children of alchoholics or adult grandchildren of alcoholics and/or friends or family of alcoholics.
 
 - Click to find out more about: [A Place for Adult Children of Alcoholics](https://al-anon.org/blog/place-adult-children-alcoholics/){target="_blank" rel="noopener"}

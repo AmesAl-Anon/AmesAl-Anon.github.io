@@ -1,6 +1,6 @@
 ---
 layout: meeting.njk
-title: Noes on how to build Ames Iowa Al-Anon Meetings site
+title: Notes -- How to build Ames Iowa Al-Anon Meetings site
 mytags:
     -   name: notes
         order: 21
@@ -17,7 +17,7 @@ eleventyExcludeFromCollections: true
 
 _____
 
-### Terminal commands to update Al-anon site as of 5/27/2026 and again 8/31/2026 Ed H.
+### Terminal commands to update Al-anon site as of 5/27/2026 and again 8/31/2026 Ed H. added SSH to github so git push origin main will work now everytime from mbp15
 
 #### cd to the root of the project folder above build and src
 #### npm run quiet 

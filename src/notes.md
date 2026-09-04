@@ -9,6 +9,7 @@ mytags:
 
 featuredImage: /_images/AmesIowaAl-AnonMeetings-textIntoImages-com.png
 
+# Use the source file's filesystem modification date for the footer.
 date: Last Modified  # page.date resolves to the file's last modified date
 
 description: 'NOTES about building the site: Ames Iowa Al-Anon meetings'

@@ -81,6 +81,13 @@ body {
 }
 
 /* Footer */
+/* Keep footer list items compact; Bulma supplies the default list treatment. */
+.footer-links {
+  margin: 0;
+}
+.footer-links li {
+  margin: 0;
+}
 .footer-social-icons span, .share-buttons a {
   margin: 0 7px;
 }

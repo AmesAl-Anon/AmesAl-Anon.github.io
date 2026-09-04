@@ -67,6 +67,13 @@ module.exports = function (eleventyConfig) {
         .toLocaleString(DateTime.DATETIME_SHORT);
     });
 
+    // Format footer dates as a calendar date without displaying the time.
+    eleventyConfig.addFilter("postDateOnly", (dateObj) => {
+        return DateTime.fromJSDate(dateObj)
+        .setZone("America/Chicago")
+        .toLocaleString(DateTime.DATE_SHORT);
+    });
+
     // Number of characters for each Card you can change it below. Set to 150 5/29/2026
     eleventyConfig.addFilter('descriptionLength', function(text) {
         let resultado

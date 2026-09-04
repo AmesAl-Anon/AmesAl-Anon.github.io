@@ -20,10 +20,10 @@ details: |
     | 7PM - ~8PM | Thu | Bethesda Lutheran Church, 1517 Northwestern Ave, Ames, Iowa 50010 | Centennial room (1st floor near NW entrance) | Adult Children AFG |
 ---
 
-- Open to families and friends of alcoholics
+- Open to families and friends of alcoholics or anyone affected
 - Plenty of free parking
-- Al-Anon meeting in Ames, Iowa every Thursday evening
-
+- Al-Anon meeting in Ames, Iowa every Thursday evening at Bethesda Lutheran Church in Ames Iowa
+- Thursday Eve Adult Child of Alcholics email: SuPoza@gmail.com
 
 >  Will benefit anyone affected, including adult children of alchoholics or adult grandchildren of alcoholics and/or friends or family of alcoholics.
 

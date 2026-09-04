@@ -13,7 +13,7 @@ mytags:
 
 featuredImage: /_images/monday-textintoimages-com.png
 
-description: '1201 McCormick AVE, Ames Iowa 50010. Ames Iowa Beginners Al-Anon meeting is a good way to learn about the benefits of Al-Anon. If you have never experienced Al-Anon or just want a Monday Meeting, please join us.'
+description: '1201 McCormick Ave, Ames Iowa 50010. Ames Iowa Beginners Al-Anon meeting is a good way to learn about the benefits of Al-Anon. If you have never experienced Al-Anon or just want a Monday Meeting, please join us.'
 
 details: |
     | Time   | Day | Address           | Room      |   Name |

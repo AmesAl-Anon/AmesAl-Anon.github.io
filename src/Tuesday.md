@@ -21,6 +21,6 @@ details: |
 
 - Comfy chairs
 - Zoom available
-- Open to families and friends of alcoholics and observers welcome too
+- Open to families & friends of alcoholics + observers welcome too
 
-### An Al-Anon meeting in Ames Iowa every Tuesday evening
+### Al-Anon meeting in Ames Iowa every Tuesday evening

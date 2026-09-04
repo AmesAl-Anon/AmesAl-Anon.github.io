@@ -18,7 +18,7 @@ details: |
     | 7PM - 8PM | Wed | 1201 McCormick Ave, Ames, Iowa 50010 | Al-Anon room (look for Al-Anon sign) | Progress Not Perfection |
 ---
  
-- Open to families and friends of alcoholics and observers welcome too
+- Open to families and friends of alcoholics + observers welcome too
 - Plenty of free parking
 
 ### Al-Anon meeting in Ames Iowa every Wednesday evening

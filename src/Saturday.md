@@ -18,4 +18,4 @@ details: |
     | 10AM-11AM | Sat | Collegiate United Methodist Church, 2622 Lincoln Way, Ames, Iowa 50014 | Pine Room (Use West door then downstairs) | New Hope |
 ---
 
-### Al-Anon meeting in Ames Iowa every Saturday morning
+### Al-Anon meeting in Ames Iowa every Saturday AM

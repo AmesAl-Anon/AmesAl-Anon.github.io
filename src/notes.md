@@ -9,7 +9,7 @@ mytags:
 
 featuredImage: /_images/AmesIowaAl-AnonMeetings-textIntoImages-com.png
 
-date: Last Modified  # page.date resolves to last modified date, otherwise to created date if date: left out
+date: Last Modified  # page.date resolves to the file's last modified date
 
 description: 'NOTES about building the site: Ames Iowa Al-Anon meetings'
 eleventyExcludeFromCollections: true

@@ -27,4 +27,6 @@ details: |
 
 >  Will benefit anyone affected, including adult children of alchoholics or adult grandchildren of alcoholics and/or friends or family of alcoholics.
 
+- <a href="https://al-anon.org/pdf/S69.pdf" target="_blank" rel="noopener">Al-Anon Family Groups Welcome Adult Children of Alcoholics PDF</a>
+
 - Click to find out more about: [A Place for Adult Children of Alcoholics](https://al-anon.org/blog/place-adult-children-alcoholics/){target="_blank" rel="noopener"}

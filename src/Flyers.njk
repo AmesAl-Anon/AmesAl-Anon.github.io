@@ -1,0 +1,31 @@
+---
+layout: meeting.njk
+title: Upcoming Local Event Flyers
+date: Last Modified
+permalink: /Flyers/
+description: Local Al-Anon event flyers for the Ames, Iowa area
+featuredImage: ""
+---
+
+<div class="columns is-multiline is-centered is-variable is-1 flyers-gallery">
+  {% if flyers.length %}
+    {% for flyer in flyers %}
+      <div class="column is-half is-one-third-tablet is-one-quarter-widescreen">
+        <article class="card flyer-card">
+          <div class="card-image">
+            <figure class="image is-4by3 flyer-thumbnail">
+              <a href="{{ flyer.src }}" target="_blank" rel="noopener" aria-label="Open {{ flyer.title }}" title="Click thumbnail to view original size">
+                <img src="{{ flyer.src }}" alt="{{ flyer.title }} flyer" loading="lazy">
+              </a>
+            </figure>
+          </div>
+          <div class="card-content flyer-caption">{{ flyer.title }}</div>
+        </article>
+      </div>
+    {% endfor %}
+  {% else %}
+    <div class="column">
+      <p>Flyers for upcoming local Al-Anon events will be posted here as they become available.</p>
+    </div>
+  {% endif %}
+</div>

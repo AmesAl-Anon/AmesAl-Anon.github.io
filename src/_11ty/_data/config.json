@@ -38,6 +38,10 @@
     {
       "anchor": "Saturday",
       "url": "/Saturday/"
+    },
+    {
+      "anchor": "Flyers",
+      "url": "/Flyers/"
     }
   ],
   "navbarButtons": [

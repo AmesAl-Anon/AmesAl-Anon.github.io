@@ -2,12 +2,30 @@ const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const { RenderPlugin } = require("@11ty/eleventy");
 const MarkdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
+const fs = require("fs");
+const path = require("path");
 
 module.exports = function (eleventyConfig) {
     // Carpetas que añade directamente al directorio de salida
     // eleventyConfig.addPassthroughCopy("src/_css");
     eleventyConfig.addPassthroughCopy("src/_images");
     eleventyConfig.addPassthroughCopy("htaccess");
+
+    eleventyConfig.addGlobalData("flyers", () => {
+        const flyersDirectory = path.join(__dirname, "src", "_images", "flyers");
+
+        if (!fs.existsSync(flyersDirectory)) {
+            return [];
+        }
+
+        return fs.readdirSync(flyersDirectory)
+            .filter((filename) => /\.(jpe?g)$/i.test(filename))
+            .sort((first, second) => first.localeCompare(second, undefined, { sensitivity: "base" }))
+            .map((filename) => ({
+                src: `/_images/flyers/${filename}`,
+                title: filename.replace(/\.[^.]+$/, "")
+            }));
+    });
 
     /* --- Social Icons --- */
     eleventyConfig.addNunjucksShortcode("facebookDarkIcon", function() {

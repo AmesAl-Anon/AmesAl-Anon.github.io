@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Notes -- How to build Ames Iowa Al-Anon Meetings site</title>
-    <meta name="description" content="NOTES about building the site: Ames Iowa Al-Anon meetings">
+    <title>Upcoming Local Event Flyers</title>
+    <meta name="description" content="Local Al-Anon event flyers for the Ames, Iowa area">
     <meta name="keywords" content="Ames Iowa Al-Anon meetings, Ames Iowa AlAnon meeting times, Ames Iowa Al-Anon meeting locations, Ames Iowa AlAnon Thursday Adult Children Meetings">
 
     <link rel="stylesheet" href="/theme.css">
@@ -17,14 +17,14 @@
       <meta property="og:site_name" content="Ames Iowa Al-Anon Meeting Schedule" />
       <meta property="og:type" content="article" />
       <meta name="twitter:card" content="summary" />
-      <meta property="og:title" content="Notes -- How to build Ames Iowa Al-Anon Meetings site" />
-      <meta property="og:description" content="NOTES about building the site: Ames Iowa Al-Anon meetings" />
+      <meta property="og:title" content="Upcoming Local Event Flyers" />
+      <meta property="og:description" content="Local Al-Anon event flyers for the Ames, Iowa area" />
       
-        <meta property="og:url" content="https://https://AmesAl-Anon.github.org/notes/" />
-      
+        <meta property="og:url" content="https://https://AmesAl-Anon.github.org/Flyers/" />
+        
 
       
-        <meta property="og:image" content="https://https://AmesAl-Anon.github.org/_images/AmesIowaAl-AnonMeetings-textIntoImages-com.png" />
+        <meta property="og:image" content="https://https://AmesAl-Anon.github.org" />
         
 
     
@@ -104,181 +104,69 @@
     <main class="section is-flex-grow-1">
 
       <article class="container articulo">
-          <h1 class="title is-2 is-size-4-mobile has-text-weight-bold">Notes -- How to build Ames Iowa Al-Anon Meetings site</h1>
+          <h1 class="title is-2 is-size-4-mobile has-text-weight-bold">Upcoming Local Event Flyers</h1>
 
         <div class="is-flex">
 
           <div class="articulo-content content mb-0">
 
             <h2 class="subtitle is-size-4 has-text-grey-dark has-text-weight-light is-family-sans-serif">
-              NOTES about building the site: Ames Iowa Al-Anon meetings
+              Local Al-Anon event flyers for the Ames, Iowa area
             </h2>
 
             
 
-            <hr>
-<h3>Terminal commands to update Al-anon site as of 5/27/2026 and again 8/31/2026 Ed H. added SSH to github so git push origin main will work now everytime from mbp15</h3>
-<h4>cd to the root of the project folder above build and src</h4>
-<h4>npm run quiet</h4>
-<h4>quit out of the build and stay in the root folder</h4>
-<h4>git add .</h4>
-<h4>git status</h4>
-<h4>git commit -m &quot;___________ note here&quot;</h4>
-<h4>git push origin main</h4>
-<h4>git status</h4>
-<h4>npm run deploy</h4>
-<h4><a href="https://AmesAl-Anon.github.io">https://AmesAl-Anon.github.io</a></h4>
-<hr>
-<h4>Streamlined the Ames Al-Anon web site a bit more on Friday June 5 2026 incorporating a lot of Miriam's suggestions.</h4>
-<h3>Ed searched the net June 5 2026 for Ames Iowa Al-Anon meetings and this search is now much much better and these are the results which now finds all the meetings except for Tuesday Al-Anon and only the Tuesday Alateen is not listed in the AI for some reason.</h3>
-<h4>Al-Anon meetings in Ames, IA, primarily hosted at 1201 McCormick Ave (Ames Alano/McCormick Clubhouse), offer regular weekly sessions for family members and friends of alcoholics.  Key local groups include the Beginner’s Al-anon Family Group on Mondays at 7:00 PM, Progress Not Perfection on Wednesdays at 7:00 PM, and Daily Hope and Courage on Thursdays at 5:45 PM.</h4>
-<h3>Specific meeting details for the Ames area include:</h3>
-<ul>
-<li>Monday Night: Beginner’s Al-anon Family Group at 1201 McCormick Ave, featuring wheelchair access and welcoming families, friends, and observers.</li>
-<li>Tuesday Night: Alateen Survivors at Collegiate United Methodist Church (2622 Lincoln Way), which is an open, online-capable meeting for young people.</li>
-<li>Wednesday Night: Progress Not Perfection AFG at 1201 McCormick Ave, a closed, wheelchair-accessible meeting.</li>
-<li>Thursday Night: Daily Hope and Courage AFG at 1201 McCormick Ave (5:45 PM) and Adult Children AFG at 1517 Northwestern Ave (7:00 PM), both closed and wheelchair-accessible.</li>
-<li>Saturday Morning: New Hope Group AFG at 2622 Lincoln Way (10:00 AM), a closed, wheelchair-accessible meeting.</li>
-</ul>
-<h4>Also added the markdown-it-attrs using npm and put this into the eleventy.js file today to enable links to open in a new tab.</h4>
-<hr>
-<h4>Ed H created this project March 2026</h4>
-<p>and pretty much finished 5/9/2026<br>
-Then simplified and removed Tags 5/26/2026. Keeping it simple.<br>
-For Ames Iowa Al-Anon on <a href="http://github.io">github.io</a></p>
-<ol>
-<li>
-<p>The name of the top level folder <a href="http://AmesAl-Anon.github.io">AmesAl-Anon.github.io</a> needs to match the name of the repository exactly<br>
-even the case needs to match I think. If they match then github will use the index.html file from the main<br>
-part of the git repository and you won't need a subdirectory. Much cleaner. Ed H 5/9/2026</p>
-</li>
-<li>
-<p>The build files are going into the build/ folder but you want the build files to be in the main part of the<br>
-repository. Git makes an exact copy of your local folder on github so you need to move the build files<br>
-into the main &quot;.&quot; part of the repository and then commit to achieve 1) above.</p>
-</li>
-</ol>
-<hr>
-<h3>after doing all of the mumbo jumbo below just to have a build folder seperate from the src folder,</h3>
-<p>i'm thinking it would be easier to build the files into the /root</p>
-<h3>but on 5/12/2026</h3>
-<h2>Wait ... I discovered a method to keep the build files separate in the build folder and</h2>
-<p>deploy to github and keep them in a separate branch gh-pages</p>
-<p>This is how I did this:</p>
-<ol>
-<li>Installed gh-pages: this is a package that will create a branch on github named gh-pages if one is<br>
-not already created. The gh-pages npm package is a Node.js utility that automates the process of publishing static files to a<br>
-gh-pages branch on GitHub, which is then served by GitHub Pages.  It creates a temporary clone of the repository, copies<br>
-specified source files (such as a dist or build folder from eleventy app), commits them, and pushes them to the target branch.</li>
-</ol>
-<blockquote>
-<p>npm install --save-dev gh-pages &lt;-- only do this once</p>
-</blockquote>
-<ol start="2">
-<li>Added a Deploy Script to package.json:</li>
-</ol>
-<blockquote>
-<p>&quot;scripts&quot;: {                      &lt;--only do this once<br>
-&quot;deploy&quot;: &quot;gh-pages -d build&quot;<br>
-}</p>
-</blockquote>
-<ol start="3">
-<li>Set the output dir to build/ in eleventy.js    &lt;-- just do this one time</li>
-</ol>
-<h2>Only do 1) 2) and 3) above one time then do the following every time you want to change the website.</h2>
-<h3>Note: Want both src files &amp; build files added to github because github is the webhost and you need the build files (which is the website itself) + want to preserve the src files. So cd into the project root which will be the folder above build and src then do the following commands from Terminal:</h3>
-<ol start="4">
-<li>
-<p>npm run quiet  &lt;-- build the project to the build folder the quit out of this</p>
-</li>
-<li>
-<p>git add . &lt;-- because want to add source code files &gt;</p>
-</li>
-<li>
-<p>git status &lt;-- to see what files are staged to be committed</p>
-</li>
-<li>
-<p>commit -m &quot;note for this commit maybe say upload source files changed&quot; &lt;-- because you want to add and commit the source code</p>
-</li>
-<li>
-<p>git push origin main</p>
-</li>
-<li>
-<p>Deploy to github</p>
-</li>
-</ol>
-<blockquote>
-<p>npm run deploy<br>
-&lt;-- this git command pushes the contents of build folder into the gh-pages branch<br>
-it only publishes build folder and build files not the source files.</p>
-</blockquote>
-<ol start="10">
-<li>
-<p>Configure GitHub Pages:          &lt;-- only do this once</p>
-<p>In your repository's Settings &gt; Pages<br>
-set the source to the gh-pages branch and the folder to /(root).  &lt;-- Ed H did this on 5/12/2026</p>
-</li>
-</ol>
-<h2>Now working the way I want it. Yahoo !!</h2>
-<hr>
-<h1>Ignore the following: Was Ed's first attempt at having my build cake and eating it too.</h1>
-<ol start="4">
-<li>from a terminal do the following</li>
-</ol>
-<p>git mv build/* .<br>
-note: if you get an error that there are already files there and is a conflic with the same name do:<br>
-git mv -f build/* .<br>
-note: the -f forces the move which should be used sparingly<br>
-note: do not need to move the images folder unless you have changed an image so do the following<br>
-git rm -r Monday Tuesday Wednesday Thursday Saturday Thursday-Adult-Child index.html<br>
-setopt extended_glob<br>
-git mv -f build/^_images .<br>
-this will move everything except anything with _images in it</p>
-<p>If the build/AmesIowaAl-AnonMeetingsList directory exists but contains no files that are tracked by Git (e.g., only untracked files or subdirectories), Git sees it as &quot;empty&quot; and refuses to move it.<br>
-so add the build files<br>
-git add -A build/* .<br>
-git status<br>
-git mv build/^_images .<br>
-git mv -f build/^_images .<br>
-then<br>
-git add .<br>
-or<br>
-git add -A<br>
-the -A will also delete any files that need deleting<br>
-git commit -m &quot;Update Al-Anon site + move build files to root again&quot;<br>
-git push origin main</p>
-<p>or you can do all of the above except the first command above git mv build/* .<br>
-from the Visual Studio Code github publish extension too except can't do the build/ mv</p>
-<hr>
-<h2>Make <a href="http://AmesAl-Anon.github.io">AmesAl-Anon.github.io</a> site google searcheable</h2>
-<ol>
-<li>
-<p>go to Google Search verification site</p>
-</li>
-<li>
-<p>meta name=&quot;google-site-verification&quot; content=&quot;random code that google told you to put into the header&quot; &lt;-- put this meta tag line into the header of this website and it only needs to go into the home page html file. I wrote some nunjucks code so it will only be in the index.html of the main site.</p>
-</li>
-<li>
-<p>Go back to Google search and finish the verification by clicking the proper button to verfiy home page</p>
-</li>
-<li>
-<p>Google will verity the site and say Done -- Ed H. done 5/15/2026</p>
-</li>
-<li>
-<p>In a day or so go to <a href="https://search.google.com/search-console?resource_id=https://amesal-anon.github.io/">https://search.google.com/search-console?resource_id=https://amesal-anon.github.io/</a> and see if it is indexed</p>
-</li>
-</ol>
-
+            
+<div class="columns is-multiline is-centered is-variable is-1 flyers-gallery">
+  
+    
+      <div class="column is-half is-one-third-tablet is-one-quarter-widescreen">
+        <article class="card flyer-card">
+          <div class="card-image">
+            <figure class="image is-4by3 flyer-thumbnail">
+              <a href="/_images/flyers/2026-10-10 Grillin Good Time Sat Oct 10 2026 Al-non Event Flyer Mary P Ames Al-Anon speaker.jpg" target="_blank" rel="noopener" aria-label="Open 2026-10-10 Grillin Good Time Sat Oct 10 2026 Al-non Event Flyer Mary P Ames Al-Anon speaker" title="Click thumbnail to view original size">
+                <img src="/_images/flyers/2026-10-10 Grillin Good Time Sat Oct 10 2026 Al-non Event Flyer Mary P Ames Al-Anon speaker.jpg" alt="2026-10-10 Grillin Good Time Sat Oct 10 2026 Al-non Event Flyer Mary P Ames Al-Anon speaker flyer" loading="lazy">
+              </a>
+            </figure>
+          </div>
+          <div class="card-content flyer-caption">2026-10-10 Grillin Good Time Sat Oct 10 2026 Al-non Event Flyer Mary P Ames Al-Anon speaker</div>
+        </article>
+      </div>
+    
+      <div class="column is-half is-one-third-tablet is-one-quarter-widescreen">
+        <article class="card flyer-card">
+          <div class="card-image">
+            <figure class="image is-4by3 flyer-thumbnail">
+              <a href="/_images/flyers/2026-10-16 Oct 16-18 Area 24 Fall Conference hosted by District 3 PXL_20260724_001523075 photo taken Thursday July 23 2026 Flyer Al-anon.jpg" target="_blank" rel="noopener" aria-label="Open 2026-10-16 Oct 16-18 Area 24 Fall Conference hosted by District 3 PXL_20260724_001523075 photo taken Thursday July 23 2026 Flyer Al-anon" title="Click thumbnail to view original size">
+                <img src="/_images/flyers/2026-10-16 Oct 16-18 Area 24 Fall Conference hosted by District 3 PXL_20260724_001523075 photo taken Thursday July 23 2026 Flyer Al-anon.jpg" alt="2026-10-16 Oct 16-18 Area 24 Fall Conference hosted by District 3 PXL_20260724_001523075 photo taken Thursday July 23 2026 Flyer Al-anon flyer" loading="lazy">
+              </a>
+            </figure>
+          </div>
+          <div class="card-content flyer-caption">2026-10-16 Oct 16-18 Area 24 Fall Conference hosted by District 3 PXL_20260724_001523075 photo taken Thursday July 23 2026 Flyer Al-anon</div>
+        </article>
+      </div>
+    
+      <div class="column is-half is-one-third-tablet is-one-quarter-widescreen">
+        <article class="card flyer-card">
+          <div class="card-image">
+            <figure class="image is-4by3 flyer-thumbnail">
+              <a href="/_images/flyers/Help Line Phone number Ames Iowa Al-Anon back of Al-Anon meeting information flyer PXL_20260421_011051359 photo taken Monday April 20 2026.jpg" target="_blank" rel="noopener" aria-label="Open Help Line Phone number Ames Iowa Al-Anon back of Al-Anon meeting information flyer PXL_20260421_011051359 photo taken Monday April 20 2026" title="Click thumbnail to view original size">
+                <img src="/_images/flyers/Help Line Phone number Ames Iowa Al-Anon back of Al-Anon meeting information flyer PXL_20260421_011051359 photo taken Monday April 20 2026.jpg" alt="Help Line Phone number Ames Iowa Al-Anon back of Al-Anon meeting information flyer PXL_20260421_011051359 photo taken Monday April 20 2026 flyer" loading="lazy">
+              </a>
+            </figure>
+          </div>
+          <div class="card-content flyer-caption">Help Line Phone number Ames Iowa Al-Anon back of Al-Anon meeting information flyer PXL_20260421_011051359 photo taken Monday April 20 2026</div>
+        </article>
+      </div>
+    
+  
+</div>
 
             <div class="tags is-justify-content-left">
 
       
       
 
-          
-            <figure class="image mt-3  is-128x128">
-              <img src="/_images/AmesIowaAl-AnonMeetings-textIntoImages-com.png" alt="Notes -- How to build Ames Iowa Al-Anon Meetings site" title="Notes -- How to build Ames Iowa Al-Anon Meetings site" width="20" height="20%">
-            </figure>
           
           
           
@@ -412,7 +300,7 @@ from the Visual Studio Code github publish extension too except can't do the bui
       <time class="has-text-grey-dark is-size-6">
       
       
-      This page last updated 9/4/2026
+      This page last updated 9/8/2026
       </time>
     
       </div>

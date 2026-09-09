@@ -18,8 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Web Share API
 
-shareMobileButton = document.getElementById("share-mobile");
-if (navigator.share) {
+const shareMobileButton = document.getElementById("share-mobile");
+const searchMobile = document.getElementById("search-mobile");
+if (navigator.share && shareMobileButton) {
   shareMobileButton.addEventListener('click', function(){
     navigator
     .share({
@@ -31,9 +32,9 @@ if (navigator.share) {
     })
     .catch(console.error);
   })
-} else {
+} else if (shareMobileButton) {
   shareMobileButton.style.display = "none";
-  document.getElementById('search-mobile').classList.add('ml-auto')
+  if (searchMobile) searchMobile.classList.add('ml-auto')
 }
 
 // Search

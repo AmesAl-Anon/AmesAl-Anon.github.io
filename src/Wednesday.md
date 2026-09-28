@@ -2,6 +2,7 @@
 layout: meeting.njk
 title: Wednesday Al-Anon Ames IA 7PM
 meetingOrder: 3
+WSOID: 503579
 
 mytags:
     -   name: Wednesday

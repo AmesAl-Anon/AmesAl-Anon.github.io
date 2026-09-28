@@ -9,10 +9,10 @@
       <a class="navbar-item" href="{{ config.url }}">
         {% if config.logoUrl.length > 0 %}
           {#
-            Logo from file: <img src="{{ config.logoUrl }}" alt="{{ config.title }}"/>
-            Logo inserted SVG: {% logoSVG %}
+            Removed Al-Anon Logo 9/28/2026. Not sure if we can use the logo even though
+            every meeting is WSO registered
           #}
-          <img src="{{ config.logoUrl }}" alt="{{ config.title }}"/> Ames Iowa
+          Ames Iowa Al-Anon  {{config.logoUrl | safe }} 
         {% else %}
           {{ config.title }}
         {% endif %}

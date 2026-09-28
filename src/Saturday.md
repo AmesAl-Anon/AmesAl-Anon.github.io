@@ -2,6 +2,7 @@
 layout: meeting.njk
 title: Saturday Al-Anon Ames IA 10AM
 meetingOrder: 6
+WSOID: 25201
 
 mytags: 
     -   name: Saturday

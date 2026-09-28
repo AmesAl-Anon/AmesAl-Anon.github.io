@@ -2,6 +2,7 @@
 layout: meeting.njk
 title: Thursday Adult Child Al-Anon Ames IA 7PM
 meetingOrder: 5
+WSOID: 30603718
 
 mytags: 
     -   name: Thursday-Adult-Child

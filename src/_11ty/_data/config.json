@@ -3,10 +3,10 @@
   "url": "/",
   "domain": "https://AmesAl-Anon.github.org",
   "language": "es",
-  "logoUrl": "/_images/Al-Anon-logo.jpg",
+  "logoUrl": "<i class='fa-regular fa-thumbs-up is-size-4 ml-2' aria-hidden='true'></i>",
   "search": false,
   "googleAnalyticsID": "",
-  "keywords": "Ames Iowa Al-Anon meetings, Ames Iowa AlAnon meeting times, Ames Iowa Al-Anon meeting locations, Ames Iowa AlAnon Thursday Adult Children Meetings",
+  "keywords": "Ames Iowa Al-Anon meetings, Ames Iowa AlAnon meeting times, Ames Iowa Al-Anon meeting locations, Ames Iowa AlAnon Thursday Adult Children Meetings, Ames Iowa Al-Anon meeting",
 
   "navbarMenu": [
 
@@ -40,8 +40,8 @@
       "url": "/Saturday/"
     },
     {
-      "anchor": "Flyers",
-      "url": "/Flyers/"
+      "anchor": "Events",
+      "url": "/Events/"
     }
   ],
   "navbarButtons": [

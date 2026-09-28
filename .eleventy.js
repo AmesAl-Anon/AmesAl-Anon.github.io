@@ -11,18 +11,18 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/_images");
     eleventyConfig.addPassthroughCopy("htaccess");
 
-    eleventyConfig.addGlobalData("flyers", () => {
-        const flyersDirectory = path.join(__dirname, "src", "_images", "flyers");
+    eleventyConfig.addGlobalData("events", () => {
+        const eventsDirectory = path.join(__dirname, "src", "_images", "events");
 
-        if (!fs.existsSync(flyersDirectory)) {
+        if (!fs.existsSync(eventsDirectory)) {
             return [];
         }
 
-        return fs.readdirSync(flyersDirectory)
+        return fs.readdirSync(eventsDirectory)
             .filter((filename) => /\.(jpe?g)$/i.test(filename))
             .sort((first, second) => first.localeCompare(second, undefined, { sensitivity: "base" }))
             .map((filename) => ({
-                src: `/_images/flyers/${filename}`,
+                src: `/_images/events/${filename}`,
                 title: filename.replace(/\.[^.]+$/, "")
             }));
     });

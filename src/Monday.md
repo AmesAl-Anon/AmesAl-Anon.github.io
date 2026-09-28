@@ -2,6 +2,7 @@
 layout: meeting.njk
 title: Monday Beginner Al-Anon Ames IA 7:10PM
 meetingOrder: 1
+WSOID: 61796
  
 mytags: 
     -   name: Beginner

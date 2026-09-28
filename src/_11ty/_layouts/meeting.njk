@@ -29,9 +29,13 @@ date: Last Modified
 
             {{ content | safe }}
 
-            <div class="tags is-justify-content-left">
+            {% if WSOID %}
+              <p><strong>WSO Meeting ID:</strong> {{ WSOID }}</p>
+            {% endif %}
 
-      {# comment out tags. Decided to simpify the site and not use them. Just put the Nav at the bottom of the page instead.  Ed H 5/26/2026 #}
+            <div class="tags is-justify-content-left">  
+      
+              {# comment out tags. Decided to simpify the site and not use them. Just put the Nav at the bottom of the page instead.  Ed H 5/26/2026 #}
       {#
 
             # Ed H. 5/7/2026 display mytags vertically on the meeting page near the bottom of the page. #
@@ -52,17 +56,11 @@ date: Last Modified
               <img src="{{featuredImage}}" alt="{{title}}" title="{{title}}" width="20" height="20%">
             </figure>
           {% endif %}
-          
-          {# display the Al-Anon logo and link to the Al-Anon website. Ed H. added 5/16/2026 #}
-            <figure class="image mb-6 is-128x128">
-              <a href="https://www.al-anon.org" target="_blank">
-                <img src="/_images/favicon.png" alt="{{title2}}" title="{{title2}}" width="20" height="20%">
-              </a>
-            </figure>
 
           {% if featuredImage2 %}
             <figure class="image mb-6 mb-6 is-128x128">
-              <img src="{{featuredImage2}}" alt="{{title}}" title="{{title}}" width="20" height="20%">
+              <img src="{{featuredImage2}}" alt="{{title}}" title="{{title}}" 
+              width="20" height="20%">
             </figure>
           {% endif %}
 

@@ -114,6 +114,32 @@ module.exports = function (eleventyConfig) {
         });
     });
 
+    eleventyConfig.addCollection("meetingNavigationPages", function (collection) {
+        const allPages = collection.getAll();
+        const meetings = allPages
+            .filter((item) => item.data.meetingOrder !== undefined && item.data.meetingOrder !== null)
+            .sort((first, second) => Number(first.data.meetingOrder) - Number(second.data.meetingOrder));
+
+        const trailingPages = [
+            allPages.find((item) => item.url === "/Events/"),
+            {
+                url: "/AmesIowaAl-AnonMeetingsList/",
+                data: { title: "Ames Iowa Al-Anon Meeting Schedule" }
+            }
+        ].filter(Boolean);
+
+        return [...meetings, ...trailingPages];
+    });
+
+    eleventyConfig.addFilter("meetingNavigation", (meetings, currentUrl) => {
+        const currentIndex = meetings.findIndex((meeting) => meeting.url === currentUrl);
+
+        return {
+            previous: currentIndex > 0 ? meetings[currentIndex - 1] : null,
+            next: currentIndex >= 0 && currentIndex < meetings.length - 1 ? meetings[currentIndex + 1] : null
+        };
+    });
+
     // Get all unique mytags from the collection and sort them by the 'order' key in the mytags objects. Ed H. 5/19/2026
     //
     // function(collection) defines a JavaScript function that takes one parameter named collection. 

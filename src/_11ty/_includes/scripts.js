@@ -130,3 +130,45 @@ function search() {
 for (icon of searchIcons) {
   icon.addEventListener("click", launchSearchBox);
 }
+
+const meetingSwipeArea = document.querySelector("[data-meeting-swipe]");
+const meetingNavigation = document.querySelector("[data-meeting-navigation]");
+
+if (meetingSwipeArea && meetingNavigation) {
+  let touchStartX = null;
+  let touchStartY = null;
+
+  meetingSwipeArea.addEventListener("touchstart", (event) => {
+    touchStartX = null;
+    touchStartY = null;
+
+    if (event.touches.length !== 1) return;
+    if (event.target.closest("a, button, input, select, textarea, [contenteditable='true']")) return;
+
+    touchStartX = event.touches[0].clientX;
+    touchStartY = event.touches[0].clientY;
+  }, { passive: true });
+
+  meetingSwipeArea.addEventListener("touchend", (event) => {
+    if (touchStartX === null || touchStartY === null) return;
+
+    const touch = event.changedTouches[0];
+    const deltaX = touch.clientX - touchStartX;
+    const deltaY = touch.clientY - touchStartY;
+    touchStartX = null;
+    touchStartY = null;
+
+    if (Math.abs(deltaX) < 60 || Math.abs(deltaX) < Math.abs(deltaY) * 1.2) return;
+
+    const destination = meetingNavigation.querySelector(
+      deltaX < 0 ? "[data-meeting-next]" : "[data-meeting-previous]"
+    );
+
+    if (destination) window.location.assign(destination.href);
+  }, { passive: true });
+
+  meetingSwipeArea.addEventListener("touchcancel", () => {
+    touchStartX = null;
+    touchStartY = null;
+  }, { passive: true });
+}

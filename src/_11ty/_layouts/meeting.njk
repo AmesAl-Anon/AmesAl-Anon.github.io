@@ -10,7 +10,7 @@ date: Last Modified
 
     {% include "nav.njk" %}
 
-    <main class="section is-flex-grow-1">
+    <main class="section is-flex-grow-1" data-meeting-swipe>
 
       <article class="container articulo">
           <h1 class="title is-2 is-size-4-mobile has-text-weight-bold">{{ title }}</h1>
@@ -31,6 +31,22 @@ date: Last Modified
 
             {% if WSOID %}
               <p><strong>WSO Meeting ID:</strong> {{ WSOID }}</p>
+            {% endif %}
+
+            {% set meetingLinks = collections.meetingNavigationPages | meetingNavigation(page.url) %}
+            {% if meetingLinks.previous or meetingLinks.next %}
+              <nav class="level is-mobile mt-5" data-meeting-navigation aria-label="Page navigation">
+                <div class="level-left">
+                  {% if meetingLinks.previous %}
+                    <a class="button is-light" href="{{ meetingLinks.previous.url }}" rel="prev" data-meeting-previous aria-label="Previous page: {{ meetingLinks.previous.data.title }}">Previous page</a>
+                  {% endif %}
+                </div>
+                <div class="level-right">
+                  {% if meetingLinks.next %}
+                    <a class="button is-light" href="{{ meetingLinks.next.url }}" rel="next" data-meeting-next aria-label="Next page: {{ meetingLinks.next.data.title }}">Next page</a>
+                  {% endif %}
+                </div>
+              </nav>
             {% endif %}
 
             <div class="tags is-justify-content-left">  

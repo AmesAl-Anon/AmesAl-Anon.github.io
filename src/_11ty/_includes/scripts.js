@@ -134,7 +134,7 @@ for (icon of searchIcons) {
 const meetingSwipeArea = document.querySelector("[data-meeting-swipe]");
 const meetingNavigation = document.querySelector("[data-meeting-navigation]");
 
-// Swipe gestures follow the same marked Previous/Next links rendered as buttons. (2026-09-30)
+// Swipe gestures follow the marked Previous/Next buttons, with Home's left swipe wrapping to Events. (2026-09-30)
 if (meetingSwipeArea && meetingNavigation) {
   let touchStartX = null;
   let touchStartY = null;
@@ -143,13 +143,26 @@ if (meetingSwipeArea && meetingNavigation) {
     touchStartX = null;
     touchStartY = null;
 
-    // Ignore multi-touch gestures and touches that began on an interactive control. (2026-09-30)
+    // Ignore multi-touch and form controls; links may start swipes while taps still follow the link. (2026-09-30)
     if (event.touches.length !== 1) return;
-    if (event.target.closest("a, button, input, select, textarea, [contenteditable='true']")) return;
+    if (event.target.closest("button, input, select, textarea, [contenteditable='true']")) return;
 
     touchStartX = event.touches[0].clientX;
     touchStartY = event.touches[0].clientY;
   }, { passive: true });
+
+  // Cancel a clear horizontal drag so a card link does not open instead of the swipe destination. (2026-09-30)
+  meetingSwipeArea.addEventListener("touchmove", (event) => {
+    if (touchStartX === null || touchStartY === null || event.touches.length !== 1) return;
+
+    const touch = event.touches[0];
+    const deltaX = touch.clientX - touchStartX;
+    const deltaY = touch.clientY - touchStartY;
+
+    if (Math.abs(deltaX) >= 60 && Math.abs(deltaX) > Math.abs(deltaY) * 1.2) {
+      event.preventDefault();
+    }
+  }, { passive: false });
 
   meetingSwipeArea.addEventListener("touchend", (event) => {
     if (touchStartX === null || touchStartY === null) return;
@@ -163,13 +176,22 @@ if (meetingSwipeArea && meetingNavigation) {
     // Require at least 60px of horizontal travel and a clearly horizontal gesture. (2026-09-30)
     if (Math.abs(deltaX) < 60 || Math.abs(deltaX) < Math.abs(deltaY) * 1.2) return;
 
-    // Left goes to Next; right goes to Previous, including the endpoint wrap links. (2026-09-30)
+    // Home's explicit left destination is Events; other left/right swipes use Next/Previous. (2026-09-30)
+    if (deltaX < 0 && meetingSwipeArea.dataset.meetingSwipeLeftDestination) {
+      event.preventDefault();
+      window.location.assign(meetingSwipeArea.dataset.meetingSwipeLeftDestination);
+      return;
+    }
+
     const destination = meetingNavigation.querySelector(
       deltaX < 0 ? "[data-meeting-next]" : "[data-meeting-previous]"
     );
 
-    if (destination) window.location.assign(destination.href);
-  }, { passive: true });
+    if (destination) {
+      event.preventDefault();
+      window.location.assign(destination.href);
+    }
+  }, { passive: false });
 
   // Discard an incomplete gesture if the browser cancels the touch sequence. (2026-09-30)
   meetingSwipeArea.addEventListener("touchcancel", () => {

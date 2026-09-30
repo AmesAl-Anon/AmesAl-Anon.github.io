@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
         }
 
         return fs.readdirSync(eventsDirectory)
-            .filter((filename) => /\.(jpe?g)$/i.test(filename))
+            .filter((filename) => /\.(jpe?g|png)$/i.test(filename))
             .sort((first, second) => first.localeCompare(second, undefined, { sensitivity: "base" }))
             .map((filename) => ({
                 src: `/_images/events/${filename}`,

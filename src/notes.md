@@ -16,30 +16,49 @@ description: 'NOTES about building the site: Ames Iowa Al-Anon meetings'
 eleventyExcludeFromCollections: true
 ---
 
-_____
+ # Site Notes
+
+## Site maintenance
 
 ### Terminal commands to update Al-anon site as of 5/27/2026 and again 8/31/2026 Ed H. added SSH to github so git push origin main will work now everytime from mbp15
 
-#### cd to the root of the project folder above build and src
-#### npm run quiet 
-#### quit out of the build and stay in the root folder
-#### git add . 
-#### git status
-#### git commit -m "___________ note here"
-#### git push origin main
-#### git status
-#### npm run deploy
-#### [https://AmesAl-Anon.github.io](https://AmesAl-Anon.github.io)
+1. cd to the root of the project folder above build and src
+2. npm run quiet
+3. quit out of the build and stay in the root folder
+4. git add .
+5. git status
+6. git commit -m "___________ note here"
+7. git push origin main
+8. git status
+9. npm run deploy
+10. [https://AmesAl-Anon.github.io](https://AmesAl-Anon.github.io)
 
-_____
+---
 
-#### Streamlined the Ames Al-Anon web site a bit more on Friday June 5 2026 incorporating a lot of Miriam's suggestions.
+## Site updates
 
-### Ed searched the net June 5 2026 for Ames Iowa Al-Anon meetings and this search is now much much better and these are the results which now finds all the meetings except for Tuesday Al-Anon and only the Tuesday Alateen is not listed in the AI for some reason.
+### Updates made September 30 2026
+
+- Set the swipe and button navigation order to Home, Meeting Schedule, the weekly meeting pages, and Events.
+- Added Previous and Next buttons at the ends of the sequence so Home links back to Events and Events links back to Home.
+- Made swiping left follow Next and swiping right follow Previous, matching the navigation buttons. Horizontal swipes can start over meeting-card links without opening the linked meeting.
+- Updated the Events image filter to include PNG files as well as JPG and JPEG files.
+- Added dated comments explaining the navigation order, endpoint links, and swipe behavior. Verified the changes with `npm run build`.
+
+### Site branding and menu updates (September 28 2026)
+
+- Removed the Al-Anon logos from the site header and added a thumbs-up icon in their place.
+- Changed the navigation menu item from Flyers to Events.
+
+### Streamlined site (June 5 2026)
+
+- Streamlined Ames Al-Anon web site a bit more Friday June 5 2026 incorporating a lot of Miriam's suggestions.
+
+- Ed searched the internet June 5 2026 for Ames Iowa Al-Anon meetings and this search now has much much better results now finding all the Ames meetings except for Tuesday Al-Anon and only the Tuesday Alateen is not listed in the AI for some reason (which AI is incorrect on that)
 
 #### Al-Anon meetings in Ames, IA, primarily hosted at 1201 McCormick Ave (Ames Alano/McCormick Clubhouse), offer regular weekly sessions for family members and friends of alcoholics.  Key local groups include the Beginner’s Al-anon Family Group on Mondays at 7:00 PM, Progress Not Perfection on Wednesdays at 7:00 PM, and Daily Hope and Courage on Thursdays at 5:45 PM. 
 
-### Specific meeting details for the Ames area include:
+#### Specific meeting details for the Ames area include:
 
 - Monday Night: Beginner’s Al-anon Family Group at 1201 McCormick Ave, featuring wheelchair access and welcoming families, friends, and observers. 
 - Tuesday Night: Alateen Survivors at Collegiate United Methodist Church (2622 Lincoln Way), which is an open, online-capable meeting for young people. 
@@ -47,13 +66,14 @@ _____
 - Thursday Night: Daily Hope and Courage AFG at 1201 McCormick Ave (5:45 PM) and Adult Children AFG at 1517 Northwestern Ave (7:00 PM), both closed and wheelchair-accessible. 
 - Saturday Morning: New Hope Group AFG at 2622 Lincoln Way (10:00 AM), a closed, wheelchair-accessible meeting. 
 
-#### Also added the markdown-it-attrs using npm and put this into the eleventy.js file today to enable links to open in a new tab.
-___
+- Also added the markdown-it-attrs using npm and put this into the eleventy.js file today to enable links to open in a new tab.
+---
 
-#### Ed H created this project March 2026 
-and pretty much finished 5/9/2026
-Then simplified and removed Tags 5/26/2026. Keeping it simple.
-For Ames Iowa Al-Anon on github.io
+## Project history
+
+- Ed H created this project March 2026 and pretty much finished 5/9/2026.
+- Then simplified and removed Tags 5/26/2026. Keeping it simple.
+- For Ames Iowa Al-Anon on github.io.
 
 1) The name of the top level folder AmesAl-Anon.github.io needs to match the name of the repository exactly
 even the case needs to match I think. If they match then github will use the index.html file from the main

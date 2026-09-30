@@ -33,6 +33,7 @@ date: Last Modified
               <p><strong>WSO Meeting ID:</strong> {{ WSOID }}</p>
             {% endif %}
 
+            {# The swipe handler follows these same marked links as the visible buttons. (2026-09-30) #}
             {% set meetingLinks = collections.meetingNavigationPages | meetingNavigation(page.url) %}
             {% if meetingLinks.previous or meetingLinks.next %}
               <nav class="level is-mobile mt-5" data-meeting-navigation aria-label="Page navigation">
@@ -44,6 +45,9 @@ date: Last Modified
                 <div class="level-right">
                   {% if meetingLinks.next %}
                     <a class="button is-light" href="{{ meetingLinks.next.url }}" rel="next" data-meeting-next aria-label="Next page: {{ meetingLinks.next.data.title }}">Next page</a>
+                  {% elif page.url == "/Events/" %}
+                    {# Events ends the sequence, so Next wraps back to Home. (2026-09-30) #}
+                    <a class="button is-light" href="/" rel="next" data-meeting-next aria-label="Next page: Al-Anon Meeting Schedule Ames Iowa">Next page</a>
                   {% endif %}
                 </div>
               </nav>

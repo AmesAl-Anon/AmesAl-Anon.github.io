@@ -4,14 +4,13 @@ title: Al-Anon Meeting Schedule Ames Iowa
 # Keep the home page footer date tied to this file's modification time.
 date: Last Modified
 description: Find an Al-Anon meeting in Ames Iowa USA. Al-Anon is a support group for friends and family members of alcoholics. Many meetings are held weekly in Ames Iowa USA.
-eleventyExcludeFromCollections: true
 pagination:
   data: collections.sortedPosts
   size: 7
   alias: items
 ---
 
-<section class="section is-flex-grow-1">
+<main class="section is-flex-grow-1" data-meeting-swipe>
   <div class="container">
     <div class="columns is-variable is-4-desktop is-multiline is-mobile">
       {% for item in items %}
@@ -20,6 +19,26 @@ pagination:
         </div>
       {% endfor %}
     </div>
+
+    {# These marked links power both the visible buttons and the shared swipe handler. (2026-09-30) #}
+    {% set meetingLinks = collections.meetingNavigationPages | meetingNavigation(page.url) %}
+    {% if meetingLinks.previous or meetingLinks.next %}
+      <nav class="level is-mobile mt-5" data-meeting-navigation aria-label="Page navigation">
+        <div class="level-left">
+          {% if meetingLinks.previous %}
+            <a class="button is-light" href="{{ meetingLinks.previous.url }}" rel="prev" data-meeting-previous aria-label="Previous page: {{ meetingLinks.previous.data.title }}">Previous page</a>
+          {% elif page.url == "/" %}
+            {# Home starts the sequence, so Previous wraps to the final page, Events. (2026-09-30) #}
+            <a class="button is-light" href="/Events/" rel="prev" data-meeting-previous aria-label="Previous page: Upcoming Local Events">Previous page</a>
+          {% endif %}
+        </div>
+        <div class="level-right">
+          {% if meetingLinks.next %}
+            <a class="button is-light" href="{{ meetingLinks.next.url }}" rel="next" data-meeting-next aria-label="Next page: {{ meetingLinks.next.data.title }}">Next page</a>
+          {% endif %}
+        </div>
+      </nav>
+    {% endif %}
 
     {# No need for the 2 pagination arrows if there is only one page of items. Ed H removed 5/9/2026 #}
     {#
@@ -31,4 +50,4 @@ pagination:
     #}
 
   </div>
-</section>
+</main>

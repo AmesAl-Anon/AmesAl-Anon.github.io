@@ -38,9 +38,7 @@ using the details frontmatter variable from each file. The details are written i
 
 Also, To find the URL of the resulting file for a paginated item in Eleventy, it can be found in page.url and in the for loop below it will be in pageitem.page.url. So Monday will go to the URL /Monday/ Thursday to /Thursday/ etc.  
 
-I get the error alot that input data should be a string. This happens when I add another md file or another file and I
-don't have the frontmatter to not include it in the collection. For example: Ed H added notes.md and did not have any
-frontmatter. then added frontmatter eleventyExcludeFromCollections: true and the error went away when doing
+I get the error alot that input data should be a string. This happens when I add another md file or another file and I don't have the frontmatter to not include it in the collection. For example: Ed H added notes.md and did not have any frontmatter. then added frontmatter eleventyExcludeFromCollections: true and the error went away when doing
 npm run quiet    Ed H 5/12/2026 #}
 
 {% for pageitem in pagination.items %}
@@ -50,4 +48,5 @@ npm run quiet    Ed H 5/12/2026 #}
 {% endfor %}
 
 ### [How can Al-Anon Help Me?](https://al-anon.org/newcomers/)
+### [Frequently Asked Questions?](https://al-anon.org/faq/)
 

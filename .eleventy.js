@@ -115,22 +115,25 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addCollection("meetingNavigationPages", function (collection) {
+        // This shared order drives both the page buttons and swipe destinations:
+        // Home, schedule, meetings by meetingOrder, then Events. (2026-09-30)
         const allPages = collection.getAll();
+        const homePage = allPages.find((item) => item.url === "/");
         const meetings = allPages
             .filter((item) => item.data.meetingOrder !== undefined && item.data.meetingOrder !== null)
             .sort((first, second) => Number(first.data.meetingOrder) - Number(second.data.meetingOrder));
 
-        const trailingPages = [
-            allPages.find((item) => item.url === "/Events/"),
-            {
-                url: "/AmesIowaAl-AnonMeetingsList/",
-                data: { title: "Ames Iowa Al-Anon Meeting Schedule" }
-            }
-        ].filter(Boolean);
+        const eventsPage = allPages.find((item) => item.url === "/Events/");
+        // Add the schedule explicitly so it stays second, before the meeting pages. (2026-09-30)
+        const schedulePage = {
+            url: "/AmesIowaAl-AnonMeetingsList/",
+            data: { title: "Ames Iowa Al-Anon Meeting Schedule" }
+        };
 
-        return [...meetings, ...trailingPages];
+        return [homePage, schedulePage, ...meetings, eventsPage].filter(Boolean);
     });
 
+    // Return adjacent pages; templates add explicit wrap links at the two ends. (2026-09-30)
     eleventyConfig.addFilter("meetingNavigation", (meetings, currentUrl) => {
         const currentIndex = meetings.findIndex((meeting) => meeting.url === currentUrl);
 

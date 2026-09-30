@@ -134,6 +134,7 @@ for (icon of searchIcons) {
 const meetingSwipeArea = document.querySelector("[data-meeting-swipe]");
 const meetingNavigation = document.querySelector("[data-meeting-navigation]");
 
+// Swipe gestures follow the same marked Previous/Next links rendered as buttons. (2026-09-30)
 if (meetingSwipeArea && meetingNavigation) {
   let touchStartX = null;
   let touchStartY = null;
@@ -142,6 +143,7 @@ if (meetingSwipeArea && meetingNavigation) {
     touchStartX = null;
     touchStartY = null;
 
+    // Ignore multi-touch gestures and touches that began on an interactive control. (2026-09-30)
     if (event.touches.length !== 1) return;
     if (event.target.closest("a, button, input, select, textarea, [contenteditable='true']")) return;
 
@@ -158,8 +160,10 @@ if (meetingSwipeArea && meetingNavigation) {
     touchStartX = null;
     touchStartY = null;
 
+    // Require at least 60px of horizontal travel and a clearly horizontal gesture. (2026-09-30)
     if (Math.abs(deltaX) < 60 || Math.abs(deltaX) < Math.abs(deltaY) * 1.2) return;
 
+    // Left goes to Next; right goes to Previous, including the endpoint wrap links. (2026-09-30)
     const destination = meetingNavigation.querySelector(
       deltaX < 0 ? "[data-meeting-next]" : "[data-meeting-previous]"
     );
@@ -167,6 +171,7 @@ if (meetingSwipeArea && meetingNavigation) {
     if (destination) window.location.assign(destination.href);
   }, { passive: true });
 
+  // Discard an incomplete gesture if the browser cancels the touch sequence. (2026-09-30)
   meetingSwipeArea.addEventListener("touchcancel", () => {
     touchStartX = null;
     touchStartY = null;

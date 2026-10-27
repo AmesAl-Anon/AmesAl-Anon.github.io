@@ -11,21 +11,32 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/_images");
     eleventyConfig.addPassthroughCopy("htaccess");
 
-    eleventyConfig.addGlobalData("events", () => {
+    const getEvents = () => {
         const eventsDirectory = path.join(__dirname, "src", "_images", "events");
 
         if (!fs.existsSync(eventsDirectory)) {
             return [];
         }
 
+        const now = new Date();
+        const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+
         return fs.readdirSync(eventsDirectory)
             .filter((filename) => /\.(jpe?g|png)$/i.test(filename))
             .sort((first, second) => first.localeCompare(second, undefined, { sensitivity: "base" }))
-            .map((filename) => ({
-                src: `/_images/events/${filename}`,
-                title: filename.replace(/\.[^.]+$/, "")
-            }));
-    });
+            .map((filename) => {
+                const date = filename.match(/^(\d{4}-\d{2}-\d{2})/)?.[1];
+                return {
+                    src: `/_images/events/${filename}`,
+                    title: filename.replace(/\.[^.]+$/, ""),
+                    isPast: Boolean(date && date < today)
+                };
+            });
+    };
+
+    eleventyConfig.addGlobalData("events", getEvents);
+    eleventyConfig.addGlobalData("upcomingEvents", () => getEvents().filter((event) => !event.isPast));
+    eleventyConfig.addGlobalData("pastEvents", () => getEvents().filter((event) => event.isPast));
 
     /* --- Social Icons --- */
     eleventyConfig.addNunjucksShortcode("facebookDarkIcon", function() {
